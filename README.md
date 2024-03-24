@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# react-portfolio
+A NodeJS and React based personal portfolio, adapted from an AWS tutorial by Brodie Vidrine.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
