@@ -75,9 +75,9 @@ const App = ({ signOut }) => {
   }
 
   return (
-    <View className="App">
+    <View className="App" style={{background:"#ddd"}}>
       <Heading level={1}>Brodie's Notes</Heading>
-      <View as="form" margin="3rem 0" onSubmit={createNote}>
+      <View as="form" margin="3em 3em" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
           <TextField
             name="name"
@@ -109,7 +109,7 @@ const App = ({ signOut }) => {
       <Heading level={2}>Current Notes</Heading>
       <View margin="3rem 0">
         {notes.map((note) => (
-          <Flex
+          <Flex style={{border: "2px solid black", marginBottom:"2px", borderRadius:"5px", background:"#eee"}}
             key={note.id || note.name}
             direction="row"
             justifyContent="center"
@@ -132,7 +132,7 @@ const App = ({ signOut }) => {
           </Flex>
         ))}
       </View>
-      <Button onClick={signOut}>Sign Out</Button>
+      <Button style={{background:"#fff"}} onClick={signOut}>Sign Out</Button>
     </View>
   );
 };
