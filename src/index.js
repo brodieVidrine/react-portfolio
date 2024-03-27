@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,6 +15,8 @@ import HomePage from './pages/HomePage';
 import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
 import config from './aws-exports';
+
+import './App.css';
 
 
 Amplify.configure(config);
