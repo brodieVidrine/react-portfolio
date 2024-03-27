@@ -13,8 +13,18 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.navbar{
+  
+  justify-content: center;
+}
+
+.navbar-menu{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.App-body {
+  background-color: #11e0c5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
