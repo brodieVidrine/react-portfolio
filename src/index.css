@@ -27,11 +27,10 @@ header{
 .contentArea{
   background-color:#EEF5FF;
   font-size: 1.2rem;
-  height:80vh;
+  min-height: 100vh;
 }
 
 .bgc{
   background-color:#86B6F6;
-  height:100vh;
   padding:0px;
 }

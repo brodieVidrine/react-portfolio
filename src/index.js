@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import './index.css';
-import App from './App';
+import About from './App';
 import HomePage from './pages/HomePage';
 
 import reportWebVitals from './reportWebVitals';
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <HomePage/>,
   },{
     path: "about",
-    element: <App/>
+    element: <About/>
   }
 ]);
 
