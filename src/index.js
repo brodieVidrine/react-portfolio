@@ -10,7 +10,8 @@ import {
 
 import './index.css';
 import About from './App';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/Home';
+import Resume from './pages/Resume';
 
 import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
   },{
     path: "about",
     element: <About/>
+  },{
+    path: "resume",
+    element: <Resume/>
   }
 ]);
 

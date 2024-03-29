@@ -13,9 +13,9 @@ function NavBar(){
       <ul className="nav nav-pills">
         <li className="nav-item"><Link to="/" className="nav-link" aria-current="page">Home</Link></li>
         <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
-        <li className="nav-item"><Link to="#" className="nav-link">Resume</Link></li>
-        <li className="nav-item"><Link to="#" className="nav-link">Portfolio</Link></li>
-        <li className="nav-item"><Link to="#" className="nav-link">React Experiments</Link></li>
+        <li className="nav-item"><Link to="/resume" className="nav-link">Resume</Link></li>
+        <li className="nav-item"><Link to="webPortfolio" className="nav-link">Web Portfolio</Link></li>
+        <li className="nav-item"><Link to="Brokemon Arena" className="nav-link">Brokemon Arena</Link></li>
       </ul>
     </header>
     )

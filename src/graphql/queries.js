@@ -1,5 +1,5 @@
 /* eslint-disable */
-// this is an auto generated file. This will be overwritten
+// this is NOT an auto generated file. This will be overwritten
 
 export const getNote = /* GraphQL */ `
   query GetNote($id: ID!) {
