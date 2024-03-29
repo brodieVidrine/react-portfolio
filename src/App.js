@@ -35,8 +35,8 @@ function About() {
                     <br></br>
                     While at ULL, I took a semester of intro Python and another semester of object-oriented-programming for C++. As I was completing these courses, Steve Jobs announced that Flash would not be supported on the new iPad.
                     This was of great concern to my old employers because they'd built a library of education minigames in Flash for their own cloud-based app. They asked me to build an HTML5/JavaScript prototype of their flagship game, Flash Card Math.
-                    After trying out a few other developers, my bosses offered me the chance to work remote, at a substantially increased hourly rate.
-                    After completing my second semester at ULL, I returned to work full-time for Ascend Math.
+                    After trying out a few other developers, my bosses offered me the chance to work remote, full-time, at a substantially increased hourly rate.
+                    After completing my second semester at ULL, I returned to work for Ascend Math.
                     <br></br>
                     <br></br>
                     That was 2013. Since then, I've lead a team of temp offshore developers in the aforementioned Flash to HTML5 Canvas conversion project. 
