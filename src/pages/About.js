@@ -1,21 +1,20 @@
 import React from 'react';
-import NavBar from './components/NavBar';
+import NavBar from '../components/NavBar';
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import ContentArea from '../components/ContentArea';
 
 //import logo from './logo.svg';
 
 
 function About() {
   return (
-    <Container fluid className="bgc">
+    <Container fluid className="bgc min-vh-100 d-flex flex-column">
             <NavBar></NavBar>
-            <Row className="w-75 mx-auto contentArea" >
-                <Col >
-                  <h1 className="mt-5 mb-5 mx-auto w-75">About</h1>
-                  <p className="mx-auto w-75">
+              <ContentArea>
+                  <h1 >About</h1>
+                  <br></br>
+                  <p>
                     My name is Brodie Vidrine. I've been writing code for the web for over a decade.
                     <br></br>
                     <br></br>
@@ -65,8 +64,7 @@ function About() {
                     <br></br>
                     Brodie Vidrine
                   </p>
-                </Col>
-            </Row>
+              </ContentArea>
     </Container>
   );
 }

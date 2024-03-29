@@ -2,19 +2,18 @@ import React from "react";
 import NavBar from "../components/NavBar";
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import ContentArea from "../components/ContentArea";
 
 
 function HomePage(){
     return(
         
-        <Container fluid className="bgc">
+        <Container fluid className="bgc min-vh-100 d-flex flex-column">
             <NavBar></NavBar>
-            <Row className="w-75 mx-auto contentArea">
-                <Col>
-                    <h1 className="w-75 mx-auto mt-5">Welcome!</h1>
-                    <p className="w-75 mx-auto mt-5">
+            <ContentArea >
+                    <h1 >Welcome!</h1>
+                    <br></br>
+                    <p>
                         Thanks for visiting my portfolio!
                         <br ></br>
                         <br ></br>
@@ -27,10 +26,8 @@ function HomePage(){
                         If you click the "Bro-Notes" link in the nav bar, you'll find a full-stack example that uses GraphQL, NoSQL (MongoDB), and an external API (AWS Authentication).
 
                     </p>
-                </Col>
                 
-            </Row>
-            
+            </ContentArea> 
         </Container>
     )
 }

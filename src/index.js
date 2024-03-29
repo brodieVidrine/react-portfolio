@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import './index.css';
-import About from './App';
+import About from './pages/About';
 import HomePage from './pages/Home';
 import Resume from './pages/Resume';
 import WebPortfolio from './pages/WebPortfolio';
