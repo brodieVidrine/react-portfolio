@@ -18,13 +18,14 @@ function HomePage(){
                         Thanks for visiting my portfolio!
                         <br ></br>
                         <br ></br>
-                        The site was built using NodeJS, React, and AWS Amplify. 
-                        It's currently hooked up to MongoDB and S3 buckets over at AWS. 
-                        I've set it up to auto-deploy every time the Git repository is updated.
+                        This website began as an AWS Amplify/React tutorial on March 24th, 2024. 
+                        It was created on my local machine using NodeJS. I've set it up to auto-deploy 
+                        every time the Git repository is updated. Since the initial creation, 
+                        I've installed React-Router for "multi-page" functionality and React-Bootstrap for responsive styling.
                         <br ></br>
                         <br ></br>
-                        There was a GraphQL/MongoDB example set up, but I've temporarily taken it down while I wire up React Router. 
-                        I've got a lot of work I'd like to show off, so organizing with pages will be ideal.
+                        If you click the "Bro-Notes" link in the nav bar, you'll find a full-stack example that uses GraphQL, NoSQL (MongoDB), and an external API (AWS Authentication).
+
                     </p>
                 </Col>
                 
