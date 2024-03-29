@@ -53,7 +53,7 @@ function About() {
                     <br></br>
                     <br></br>
                     Today, I touch every part of the stack on most of my sprint items. 
-                    That reminds me, we've been scrumming it up (Agile Development) every weekdsay morning for the last 7 years. 
+                    That reminds me, we've been scrumming it up (Agile Development) every weekday morning for the last 7 years. 
                     As I perform analysis and code, I touch page controllers, APIs (from the endpoint to the DAO), and I update the app's DB as needed.
                     <br></br>
                     <br></br>

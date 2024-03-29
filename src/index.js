@@ -12,6 +12,8 @@ import './index.css';
 import About from './App';
 import HomePage from './pages/Home';
 import Resume from './pages/Resume';
+import WebPortfolio from './pages/WebPortfolio';
+import BrokemonArena from './pages/BrokemonArena';
 
 import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
@@ -32,6 +34,12 @@ const router = createBrowserRouter([
   },{
     path: "resume",
     element: <Resume/>
+  },{
+    path: "webPortfolio",
+    element: <WebPortfolio/>
+  },{
+    path: "brokemonArena",
+    element: <BrokemonArena/>
   }
 ]);
 
