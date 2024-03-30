@@ -11,7 +11,9 @@ function BrokemonArena(){
         <Container fluid className="bgc min-vh-100 d-flex flex-column">
             <NavBar></NavBar>
             <ContentArea>
-                    <h1 className="w-75 mx-auto mt-5">Brokémon Arena</h1>
+                    <h1>Brokémon Arena</h1>
+                    <br></br>
+                    <p>Coming soon! A React and GraphQL example.</p>
             </ContentArea>
         </Container>
     )

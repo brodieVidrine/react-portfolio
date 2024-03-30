@@ -11,6 +11,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import bcThumb from "../static/gr/bcThumb.png";
+import rocketThumb from "../static/gr/rocketThumb.png";
+import expThumb from "../static/gr/expThumb.png";
+import canyonThumb from "../static/gr/canyonThumb.png";
 
 const thumbs = [
     {
@@ -24,19 +27,19 @@ const thumbs = [
     name: 'Rocket Gal',
     path: "/",
     description: 'A minigame designed to help teach kids about visualzing fractions.',
-    imageId: bcThumb
+    imageId: rocketThumb
   },{
     id: 0,
     name: 'The Ascend Student Experience',
     path: "/",
-    description: "This is a static version of our web application that I built for our marketing site. Popular with our sales team.",
-    imageId: bcThumb
+    description: "This is a static version of our web application. Created for our marketing site and update it as new features are added to the actual system. Popular with our sales team.",
+    imageId: expThumb
   },{
     id: 0,
-    name: 'Flash Card Math',
+    name: 'Canyon Escape',
     path: "/",
-    description: 'This was one of my first projects at Ascend Math. I recreated and improved a legacy Flash teaching aid.',
-    imageId: bcThumb
+    description: 'One of the most recent minigames, or "explorations", that I programmed. I used a tiling GUI to turn a sprite-sheet into this map.',
+    imageId: canyonThumb
   }
 
 ];
@@ -53,7 +56,7 @@ function WebPortfolio(){
         //setFullscreen(breakpoint);
         setShow(true);
         setModTitle(title);
-        
+                
     }
 
     return(

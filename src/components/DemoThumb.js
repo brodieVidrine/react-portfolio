@@ -15,7 +15,7 @@ function DemoThumb({
 
  return (
     
-    <Card className="demoCard" onClick={clicked}>
+    <Card className="demoCard border-secondary" onClick={clicked}>
         <Card.Img variant="top" alt="demo thumnail" src={img} />
         <Card.Body>
         <Card.Title>{title}</Card.Title>
