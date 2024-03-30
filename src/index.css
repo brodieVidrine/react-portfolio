@@ -34,4 +34,6 @@ header{
 .bgc{
   background-color:#86B6F6;
   padding:0px;
+  background-image: url('./static/gr/waves.svg');
+  background-blend-mode: multiply;
 }

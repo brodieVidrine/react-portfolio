@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name = "viewport" content = "width = device-width-20,
+       initial-scale = 1.0, user-scalable = no">
+<title>Base Camp</title>
+
+<link href="css/basecamp.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<script>
+	
+	var bcdATime = "9960";
+	var timeSpent = parseInt("20");
+	var xp = parseInt( "11760" );
+	var unparsedTime = "600";
+	const maxDailyTime = parseInt("600");
+	var firstVisit = parseInt("0") == 1;
+	
+	function playGame(tileNum){
+		//$("#alertBox").show();
+		//$("#alertEnter").show();
+			
+		var name = portalName(tileNum);
+		$("#goLocation").html( name );
+		$("#appFrameDiv2").hide();
+		enterBuilding();
+	}
+	
+	function portalName(index){
+		
+		var name;
+		
+		switch( index ){
+			case 3:
+				name="Space Blaster";
+				break;
+			case 4:
+				name="Snowcat Rally";
+				break;
+			case 5:
+				name="Treasure Room";
+				break;
+			case 6:
+				name="Block Drop";
+				break;
+			case 7:
+				name="Arizona Stone";
+				break;
+			case 8:
+				name="Hungry Bears";
+				break;
+			case 9:
+				name="General Store";
+				break;	
+			case 10:
+				name="Mystery Game";
+				break;
+			case 11:
+				name="Silly Sub";
+				break;
+			case 12:
+				name="Social Mania!";
+				break;
+			case 13:
+				name="MathVerse.Club";
+				break;
+		}
+		
+		return name;
+	}
+	
+	function buildMessage( loc ){
+		//console.log("build message...");
+		$("#alertBox").show();
+		$("#alertEnter").show();
+		$("#goLocation").html( loc );
+	}
+	
+	function comingSoon(place){
+		$("#alertBox").show();
+		$("#alertEnter").hide();
+		$("#goLocation").html( place + " has not opened yet. Try again some other time." );
+	}
+	
+	function logoutButton(){
+		window.location.href = 'logout.do';
+	}
+	
+</script>
+<script data-main="js/basecamp/baseCampRequire" src="js/require-jquery.js"></script>
+<div id="floater" >
+	
+	
+	<div id="modules" >
+		<canvas id="canvas" width="934" height="600"></canvas>
+	</div>
+	
+	<div id="blockDrop">
+		<div id="dropMenu">
+			<div id="dropUpcomingDiv">
+				<div>Next Piece</div>
+				<canvas id="dropUpcoming"></canvas>
+				<div>score <span id="dropScore">00000</span></div>
+				<div>rows <span id="dropRows">0</span></div>
+			</div>
+		</div>
+		<div id="dropCanvasDiv"><canvas id="dropCanvas"></canvas></div>
+	</div>
+	
+	<div id="jumpGame">
+		<div id="jumperVertical">
+		<canvas id="platformerCanvas" width="800" height="480" style="background-color:black"></canvas>
+		</div>
+	</div>
+	
+	<div id="appFrameDiv" style="position:absolute;top:40px;margin-left:20px;">
+		<iframe id="appFrame" border="none" width="970" height="630"></iframe>
+	</div>
+	<div id="appFrameDiv2" style="display:none;position:absolute;top:40px;margin-left:20px;width:970px;height:630px;background-color:black;color:white;background-image:url('images/basecamp/background8.png');background-size:cover;">
+		
+		<div id="row1" style="margin-top:20px;">
+		
+		</div>
+		<div id="row2" >
+			
+		</div>
+		<div id="row3" >
+			
+			
+		</div>
+	</div>
+	<div id="controllerHUD" style="pointer-events: none;" >
+		
+		<div id="skin">
+			<div id="userStatsLeft">
+				<div class="statsDiv" id="xpLabel"> Rank:<span id="rankDisplay" class="userStat"></span></div>
+			</div>
+			<div id="userStatsRight">
+				<div class="statsDiv" id="aTimeLabel"> Available Time:<span class="userStat" id="aTimeData">0:00</span></div>
+			</div>
+			<div id="userStatsBottom">
+				<script>  </script>
+				<!--<div class="statsDiv" id="levelLabel"> Level:<span class="userStat">2</span></div>-->
+				<div class="statsDiv" id="xpLabel"> XP:<span class="userStat"> 
+				11760 
+				</span></div>
+				<div class="statsDiv" id="coinsLabel"> Coins:<span id="coinsData" class="userStat">368</span></div>
+				<div class="statsDiv" id="tTimeLabel"> Passes:<span class="userStat" id="tTimeData" >0</span></div>
+			</div>
+			
+			<div class="logoutCorner" >
+				<input type="image" width="102" height="52" src="images/basecamp/logout.png" onclick="logoutButton();" style="pointer-events: auto;"/>
+			</div>
+			
+			<div class="resetCorner" >
+				<input type="image" width="102" height="52" src="images/basecamp/reset.png" onclick="resetButton();" style="pointer-events: auto;"/>
+			</div>
+			
+		</div>
+		
+		<div id="controlSurface" >
+			<div id="playAgain" style="pointer-events: auto;" >Play Again</div>
+		</div>
+		
+		<div id="homeBtn">
+			<input type="image" width="65" height="65" src="images/basecamp/homeCircle3.png" onclick="backHome()" style="pointer-events: auto;"/>
+		</div>
+		
+		<div id="returnBtn">
+			<input type="image" width="65" height="65" src="images/basecamp/returnCircle.png" onclick="backToCamp()" style="pointer-events: auto;"/>
+		</div>
+		
+		<div id="tabletDPad" style="pointer-events: auto;" >
+			<div id="leftDPad" class="dPadBtn" ontouchstart="dPadTouch(this.id, 'down')" onmousedown="dPadTouch(this.id, 'down')" onmouseup="dPadTouch(this.id, 'up')" ontouchend="dPadTouch(this.id, 'up')" ></div>
+			<div id="rightDPad" class="dPadBtn" ontouchstart="dPadTouch(this.id, 'down')" onmousedown="dPadTouch(this.id, 'down')" onmouseup="dPadTouch(this.id, 'up')" ontouchend="dPadTouch(this.id, 'up')" ></div>
+			<div id="downDPad" class="dPadBtn" ontouchstart="dPadTouch(this.id, 'down')" onmousedown="dPadTouch(this.id, 'down')" onmouseup="dPadTouch(this.id, 'up')" ontouchend="dPadTouch(this.id, 'up')" ></div>
+			<div id="upDPad" class="dPadBtn" ontouchstart="dPadTouch(this.id, 'down')" onmousedown="dPadTouch(this.id, 'down')" onmouseup="dPadTouch(this.id, 'up')" ontouchend="dPadTouch(this.id, 'up')" ></div>
+		</div>
+	</div>
+	<div id="tutorialPane">
+		<div id="tutTitle">Welcome to Base Camp!</div>
+		<div id="tutContent" >
+		
+		<div class="tutColumn">Use the arrow keys to move around.</div> <div id="fakePad"  class="tutColumn" ></div>
+		
+		<div id="cabinInstruction" class="tutColumn">You can play inside the buildings. Read the signs to find out what's inside.</div> <div id="fakeCabin"  class="tutColumn" ></div>
+		</div>
+		<div id="tutButton"><div id="tutOK" class="tutStart" onClick="startTimer()">Let's Go!</div></div>
+	</div>
+	<div id="alertBox">
+		<div style="margin-top:50px;margin-bottom:25px;">
+		<span id="goLocation"></span>
+		</div>
+		<div>
+			<div id="tutOK" class="tutStart" onClick="backToOrigin()">Cancel</div>
+			<div id="alertEnter" class="tutStart"  onClick="enterBuilding()">Enter</div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
