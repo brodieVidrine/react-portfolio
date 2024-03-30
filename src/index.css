@@ -28,6 +28,7 @@ header{
   max-height: 90vh;
   overflow-y:auto;
   padding-bottom:10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
 }
 
 #resumeFrame{
@@ -40,4 +41,8 @@ header{
   background-image: url('./static/gr/waves.svg');
   background-blend-mode: multiply;
   background-size:contain;
+}
+
+.demoCard{
+  cursor:pointer;
 }
