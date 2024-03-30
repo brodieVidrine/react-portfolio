@@ -40,7 +40,7 @@ header{
   padding:0px;
   background-image: url('./static/gr/waves.svg');
   background-blend-mode: multiply;
-  background-size:contain;
+  background-size:100%;
 }
 
 .demoCard{

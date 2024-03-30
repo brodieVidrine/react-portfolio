@@ -12,13 +12,34 @@ import Col from 'react-bootstrap/Col';
 
 import bcThumb from "../static/gr/bcThumb.png";
 
-const thumbs = [{
+const thumbs = [
+    {
     id: 0,
     name: 'Base Camp',
-    path: '../static/html/basecamp.html',
-    description: 'I turned an HTML5 recreation of Wolfenstein 3D into a kid-friendly game hub. Many of our customers say its their favorite feature.',
+    path: "/",
+    description: 'I turned an HTML5 recreation of Wolfenstein 3D into a kid-friendly game hub.',
     imageId: bcThumb
-  }];
+  },{
+    id: 0,
+    name: 'Rocket Gal',
+    path: "/",
+    description: 'A minigame designed to help teach kids about visualzing fractions.',
+    imageId: bcThumb
+  },{
+    id: 0,
+    name: 'The Ascend Student Experience',
+    path: "/",
+    description: "This is a static version of our web application that I built for our marketing site. Popular with our sales team.",
+    imageId: bcThumb
+  },{
+    id: 0,
+    name: 'Flash Card Math',
+    path: "/",
+    description: 'This was one of my first projects at Ascend Math. I recreated and improved a legacy Flash teaching aid.',
+    imageId: bcThumb
+  }
+
+];
 
 
 function WebPortfolio(){
@@ -26,11 +47,13 @@ function WebPortfolio(){
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     const [modTitle, setModTitle] = useState("");
+    const [demoPath, setDemoPath] = useState("");
 
     function handleShow(title, path) {
         //setFullscreen(breakpoint);
         setShow(true);
         setModTitle(title);
+        
     }
 
     return(
@@ -38,7 +61,7 @@ function WebPortfolio(){
         <Container fluid className="bgc  min-vh-100 d-flex flex-column">
             <NavBar></NavBar>
             <ContentArea>
-                <h1 className="w-75 mx-auto mt-5">Web Portfolio</h1>
+                <h1 className="w-75 mx-auto mt-5 text-center">Web Portfolio</h1>
                 <br></br>
                 <Row xs={1} md={2} className="g-4">
                     {thumbs.map( data =>
@@ -58,7 +81,9 @@ function WebPortfolio(){
                     <Modal.Header closeButton>
                     <Modal.Title>{modTitle}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>Modal body content</Modal.Body>
+                    <Modal.Body>
+                        
+                    </Modal.Body>
                 </Modal>
             </ContentArea>
         </Container>
