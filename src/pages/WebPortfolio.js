@@ -77,12 +77,12 @@ function WebPortfolio(){
                     </Col>
                     )}
                 </Row>
-                <Modal show={show} fullscreen='true' onHide={() => setShow(false)}>
+                <Modal show={show} fullscreen={true} onHide={() => setShow(false)}>
                     <Modal.Header closeButton>
                     <Modal.Title>{modTitle}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        
+                        <iframe id="bcFrame" className="w-100 border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/basecamp.html" />
                     </Modal.Body>
                 </Modal>
             </ContentArea>
