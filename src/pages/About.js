@@ -11,10 +11,11 @@ function About() {
   return (
     <Container fluid className="bgc min-vh-100 d-flex flex-column">
             <NavBar></NavBar>
-              <ContentArea>
+              <ContentArea >
                   <h1 >About</h1>
                   <br></br>
-                  <p>
+                  
+                  <div>
                     My name is Brodie Vidrine. I've been writing code for the web for over a decade.
                     <br></br>
                     <br></br>
@@ -63,7 +64,8 @@ function About() {
                     Thanks for reading,
                     <br></br>
                     Brodie Vidrine
-                  </p>
+                  </div>
+              
               </ContentArea>
     </Container>
   );

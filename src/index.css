@@ -25,6 +25,9 @@ header{
 .contentArea{
   background-color:#EEF5FF;
   font-size: 1.2rem;
+  max-height: 90vh;
+  overflow-y:auto;
+  padding-bottom:10px;
 }
 
 #resumeFrame{
@@ -36,4 +39,5 @@ header{
   padding:0px;
   background-image: url('./static/gr/waves.svg');
   background-blend-mode: multiply;
+  background-size:contain;
 }
