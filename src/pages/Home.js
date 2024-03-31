@@ -55,8 +55,8 @@ function HomePage(){
         
         <Container fluid className="bgc min-vh-100 d-flex flex-column">
             <NavBar></NavBar>
-            <ContentArea className="align-self-stretch">
-                    <Row className="align-self-stretch"> 
+            <ContentArea >
+                    <Row > 
                         <Row>
                             <h1 >Welcome!</h1>
                             <br></br>

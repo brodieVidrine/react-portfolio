@@ -7,8 +7,10 @@ function ContentArea({children}){
 
     return(
         <Row className="w-75 mx-auto contentArea flex-grow-1 p-5">
-                
-                    {children}
+            <Row className="mx-auto w-75">
+            {children}
+            </Row>
+                    
 
         </Row>
     );

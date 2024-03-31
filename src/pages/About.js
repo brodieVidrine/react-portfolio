@@ -63,7 +63,7 @@ function About() {
                     As I perform analysis and code, I touch page controllers, APIs (from the endpoint to the DAO), and I update the app's DB an SPs when needed.
                     <br></br>
                     <br></br>
-                    In my free time, I enjoy writing code in C# (Unity) and Luaua (Roblox Studio). 
+                    In my free time, I enjoy writing code in C# (Unity) and Luau (Roblox Studio). 
                     I'm currently working on a "tower defense" game with my 9 year old. He builds the maps and I handle the scripting. 
                     This brings me joy I can't describe in plain English.
                     <br></br><br></br>
