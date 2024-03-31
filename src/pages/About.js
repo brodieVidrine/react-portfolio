@@ -4,6 +4,8 @@ import NavBar from '../components/NavBar';
 import Container from 'react-bootstrap/Container';
 import ContentArea from '../components/ContentArea';
 
+import { Row } from 'react-bootstrap';
+
 //import logo from './logo.svg';
 
 
@@ -12,10 +14,9 @@ function About() {
     <Container fluid className="bgc min-vh-100 d-flex flex-column">
             <NavBar></NavBar>
               <ContentArea >
-                  <h1 >About</h1>
-                  <br></br>
-                  
-                  <div>
+                  <h1>About</h1>
+
+                  <p className="mt-3">
                     My name is Brodie Vidrine. I've been writing code for the web for over a decade.
                     <br></br>
                     <br></br>
@@ -73,7 +74,7 @@ function About() {
                     Thanks for reading,
                     <br></br>
                     Brodie Vidrine
-                  </div>
+                  </p>
               
               </ContentArea>
     </Container>
