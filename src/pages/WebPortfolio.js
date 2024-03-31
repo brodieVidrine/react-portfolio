@@ -34,11 +34,11 @@ const thumbs = [
     imageId: rocketThumb
   },{
     id: 2,
-    name: 'The Ascend Student Experience',
+    name: 'Interactive Video Player',
     frame: (
-        <iframe id="expFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/content.html?lesson=linearEQ2" />
+        <iframe id="expFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/stuex/html5videoplayer.html?videoPath=https://web29.streamhoster.com/ascendedu/01_01_C.mp4&userName=Recruiter&captionName=captions/captions_01_01_C.xml&problems=ivProblems/01_01_C.xml" />
     ),
-    description: "This is a static version of our web application. Created for our marketing site and update it as new features are added to the actual system. Popular with our sales team.",
+    description: "This is an iframe based video API that I created for Ascend. It accepts captions, interactivity (real time concept checks), and skin XMLs. ",
     imageId: expThumb
   },{
     id: 3,

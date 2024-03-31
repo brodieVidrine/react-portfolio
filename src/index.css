@@ -35,14 +35,14 @@ header{
   min-height: 70vh;
 }
 
-#bcFrame, #expFrame{
+#bcFrame{
   max-width:1084px;
   max-height:900px;
   height: 75vh;
   width:100%;
 }
 
-#rocketFrame, #canyonFrame{
+#rocketFrame, #canyonFrame, #expFrame{
   width:965px;
   height:584px;
   overflow:hidden;
