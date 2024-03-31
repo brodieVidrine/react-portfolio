@@ -50,7 +50,7 @@ function About() {
                     We took pages that were heavily reliant on session attributes and moved to AJAX driven by RESTful services.
                     <br></br>
                     <br></br>
-                    At the time, we decided to move our codebase from SVS to Git. As our company "commited" to best practices, it made learning from my teammates much easier.
+                    At the time, we decided to move our code repository from SVN (Apache Subversion) to Git. As our company "commited" to best practices, it made learning from my teammates much easier.
                     I studied pull-requests to peek under the hood of our controllers, APIs, service layers, and DAOs. 
                     I will forever be grateful to my offshore colleagues for their help getting me started with server side programming.
                     They were generous enough to review my early Java code and give me pointers when I needed to debug. 

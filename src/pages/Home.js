@@ -1,5 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 
 import Container from 'react-bootstrap/Container';
 import ContentArea from "../components/ContentArea";
@@ -11,6 +13,7 @@ import graphThumb from '../static/gr/badges/smGraph.png';
 import mongoThumb from '../static/gr/badges/smMongo.png';
 import routerThumb from '../static/gr/badges/smRouter.png';
 import bootThumb from '../static/gr/badges/smBoot.png';
+import SmartImage from "../components/SmartImage";
 const badges = [
     {
         id:0,
@@ -51,6 +54,19 @@ const badges = [
 ];
 
 function HomePage(){
+    
+    const [show, setShow] = useState(false);
+    const [modTitle, setModTitle] = useState("");
+    const [modCopy, setModCopy] = useState("");
+
+    function clickHandler(title, copy) {
+        console.log( "target = > ", title, copy );
+        //setFullscreen(breakpoint);
+        setShow(true);
+        setModTitle( title );
+        setModCopy( copy );
+    }
+    
     return(
         
         <Container fluid className="bgc min-vh-100 d-flex flex-column">
@@ -75,14 +91,19 @@ function HomePage(){
                         </Row>
                         <Row className="justify-content-center flex-grow-1 mt-5" sm={"auto"}> 
                             {badges.map( data =>
-                                <Col key={data.id}>
-                                    <Image alt={data.alt} src={data.thumb}>
-
-                                    </Image>
+                                <Col key={data.id} >
+                                    <SmartImage source={data.thumb} title={data.alt} copy={data.hover} handler={clickHandler}>    
+                                    </SmartImage>
                                 </Col>
                             )}
                         </Row>
                     </Row>
+                    <Modal show={show} fullscreen={"lg"} onHide={() => setShow(false)} centered>
+                        <Modal.Header closeButton>
+                        <Modal.Title>{modTitle}</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body className="p-5">{modCopy}</Modal.Body>
+                    </Modal>
             </ContentArea> 
         </Container>
     )
