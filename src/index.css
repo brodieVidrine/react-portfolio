@@ -35,8 +35,17 @@ header{
   min-height: 70vh;
 }
 
-#bcFrame{
-  min-height: 90vh;
+#bcFrame, #expFrame{
+  max-width:1084px;
+  max-height:900px;
+  height: 75vh;
+  width:100%;
+}
+
+#rocketFrame, #canyonFrame{
+  width:965px;
+  height:584px;
+  overflow:hidden;
 }
 
 .bgc{

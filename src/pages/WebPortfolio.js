@@ -19,25 +19,33 @@ const thumbs = [
     {
     id: 0,
     name: 'Base Camp',
-    path: "/",
+    frame: (
+        <iframe id="bcFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/basecamp.html" />
+    ),
     description: 'I turned an HTML5 recreation of Wolfenstein 3D into a kid-friendly game hub.',
     imageId: bcThumb
   },{
-    id: 0,
+    id: 1,
     name: 'Rocket Gal',
-    path: "/",
+    frame: (
+        <iframe id="rocketFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/rocketgal/rocketgal.html" />
+    ),
     description: 'A minigame designed to help teach kids about visualzing fractions.',
     imageId: rocketThumb
   },{
-    id: 0,
+    id: 2,
     name: 'The Ascend Student Experience',
-    path: "/",
+    frame: (
+        <iframe id="expFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/stuex/climber2023/content.html?lesson=linearEQ2" />
+    ),
     description: "This is a static version of our web application. Created for our marketing site and update it as new features are added to the actual system. Popular with our sales team.",
     imageId: expThumb
   },{
-    id: 0,
+    id: 3,
     name: 'Canyon Escape',
-    path: "/",
+    frame: (
+        <iframe id="canyonFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/canyonescape/canyon+Escape+1031.html" />
+    ),
     description: 'One of the most recent minigames, or "explorations", that I programmed. I used a tiling GUI to turn a sprite-sheet into this map.',
     imageId: canyonThumb
   }
@@ -47,16 +55,15 @@ const thumbs = [
 
 function WebPortfolio(){
 
-    const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(false);
     const [modTitle, setModTitle] = useState("");
-    const [demoPath, setDemoPath] = useState("");
+    const [demoFrame, setDemoFrame] = useState("");
 
-    function handleShow(title, path) {
+    function handleShow(title, frame) {
         //setFullscreen(breakpoint);
         setShow(true);
         setModTitle(title);
-                
+        setDemoFrame(frame);        
     }
 
     return(
@@ -74,7 +81,7 @@ function WebPortfolio(){
                             title={data.name}
                             text={data.description}
                             img ={data.imageId}
-                            path={data.path}
+                            frame={data.frame}
                             callBack={handleShow}
                         ></DemoThumb>            
                     </Col>
@@ -84,9 +91,7 @@ function WebPortfolio(){
                     <Modal.Header closeButton>
                     <Modal.Title>{modTitle}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
-                        <iframe id="bcFrame" className="w-100 border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/basecamp.html" />
-                    </Modal.Body>
+                    <Modal.Body className="text-center">{demoFrame}</Modal.Body>
                 </Modal>
             </ContentArea>
         </Container>

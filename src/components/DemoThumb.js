@@ -5,12 +5,12 @@ function DemoThumb({
     title = "Card Title",
     img,
     text,
-    path,
+    frame,
     callBack
 }){
 
     function clicked(){
-        callBack(title, path);
+        callBack(title, frame);
     }
 
  return (
