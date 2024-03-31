@@ -36,7 +36,7 @@ const thumbs = [
     id: 2,
     name: 'The Ascend Student Experience',
     frame: (
-        <iframe id="expFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/stuex/climber2023/content.html?lesson=linearEQ2" />
+        <iframe id="expFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/content.html?lesson=linearEQ2" />
     ),
     description: "This is a static version of our web application. Created for our marketing site and update it as new features are added to the actual system. Popular with our sales team.",
     imageId: expThumb

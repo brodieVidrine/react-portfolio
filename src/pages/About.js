@@ -58,10 +58,14 @@ function About() {
                     <br></br>
                     <br></br>
                     Today, I touch every part of the stack on most of my sprint items.
-                    (That reminds me! We've been scrumming it up (Agile Development) every weekday morning for the last 7 years. Over 200 sprints!) 
+                    (That reminds me! We've been scrumming it up [Agile Development] every weekday morning for the last 7 years. Over 200 sprints!) 
                     As I perform analysis and code, I touch page controllers, APIs (from the endpoint to the DAO), and I update the app's DB an SPs when needed.
                     <br></br>
                     <br></br>
+                    In my free time, I enjoy writing code in C# (Unity) and Luaua (Roblox Studio). 
+                    I'm currently working on a "tower defense" game with my 9 year old. He builds the maps and I handle the scripting. 
+                    This brings me joy I can't describe in plain English.
+                    <br></br><br></br>
                     Unfortunately, my current employer is restructuring and I now find myself looking for my next opportunity. 
                     I hope I can be of use to your organization. I'm extremely loyal and I genuinely love learning and helping out.
                     <br></br>
