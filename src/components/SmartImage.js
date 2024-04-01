@@ -15,7 +15,7 @@ function SmartImage({
     }
 
     return(
-        <Image style={{cursor:"pointer", boxShadow:"2px 2px 2px #000", backgroundColor:"rgba(0, 0, 0, .1)"}} onClick={clicked} src={source} thumbnail></Image>
+        <Image style={{cursor:"pointer", boxShadow:"2px 2px 3px #000", backgroundColor:"rgba(0, 0, 0, .1)"}} onClick={clicked} src={source} thumbnail></Image>
     );
 }
 

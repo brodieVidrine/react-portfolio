@@ -48,6 +48,10 @@ header{
   overflow:hidden;
 }
 
+a{
+  font-weight: bold;
+}
+
 .bgc{
   background-color:#86B6F6;
   padding:0px;

@@ -19,17 +19,17 @@ const badges = [
         id:0,
         thumb: npmThumb,
         alt: "NPM/NodeJS",
-        hover: "This site was started on my local with npm."
+        hover: "This site was started on my local with npm. I'm using nvm-Windows to manage my nodeJS version."
     },{
         id:1,
         thumb: awsThumb,
         alt: "AWS",
-        hover: "This site is hosted by AWS Amplify, which auto-deploys every time I update my main branch."
+        hover: "This site is hosted by AWS Amplify, which auto-deploys every time I update my main branch. The static content served under the 'Web Portfolio' section is hosted and delivered via AWS Cloudformation."
     },{
         id:2,
         thumb: reactThumb,
         alt: "React",
-        hover: "This site was started on my local with npm."
+        hover: "This started as a default React project. All new components were coded by hand. (And with many helpful suggestions from Visual Studio Code.)."
     },{
         id:3,
         thumb: routerThumb,
@@ -39,7 +39,7 @@ const badges = [
         id:4,
         thumb: bootThumb,
         alt: "Bootstrap CSS",
-        hover: "Installed react-bootstrap to make responsive design easy."
+        hover: "Installed react-bootstrap to make responsive design easy. This modal is a Bootstrap custom component!"
     },{
         id:5,
         thumb: graphThumb,
@@ -49,7 +49,7 @@ const badges = [
         id:6,
         thumb: mongoThumb,
         alt: "Mongo DB",
-        hover: "This site stores its data in MongoDB tables, hosted by Amazon RWS."
+        hover: "This site stores its data in MongoDB tables, hosted by Amazon RWS. I'm relatively new to NoSQL DBs, but I love how easy they are to work with!"
     }
 ];
 
@@ -74,16 +74,18 @@ function HomePage(){
             <ContentArea >
                     <Row > 
                         <Row>
+                            
                             <h1 >Welcome!</h1>
                             <br></br>
                             <p>
                                 Thanks for visiting my portfolio!
                                 <br ></br>
                                 <br ></br>
-                                This website began as an AWS Amplify/React tutorial on March 24th, 2024. 
-                                It was created on my local machine using NodeJS. I've set it up to auto-deploy 
-                                every time the Git repository is updated. Since the initial creation, 
-                                I've installed React-Router for "multi-page" functionality and React-Bootstrap for responsive styling.
+                                This website began as an <a href="https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/" target="_blank">AWS Amplify + React tutorial</a> on March 24th, 2024. 
+                                It was created on my local machine using NodeJS. The project is wired for CI/CD, auto-deploying 
+                                every time I push commits to the main branch. Since the initial creation, 
+                                I've installed <a target="_blank" href="https://reactrouter.com/en/main">React-Router</a> for "multi-page" functionality and <a href="https://react-bootstrap.github.io/" target="_blank">React-Bootstrap</a> for responsive styling.
+                                Want to take a peek under the hood? I've made the <a href="https://github.com/brodieVidrine/react-portfolio/tree/main/src" target="_blank">Git repository</a> public so you can see how it all fits together.
                                 <br ></br>
                                 <br ></br>
                                 If you click the "Bro-Notes" link in the nav bar, you'll find a full-stack example that uses GraphQL, NoSQL (MongoDB), and an external API (AWS Authentication).
