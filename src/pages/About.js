@@ -45,7 +45,7 @@ function About() {
           I studied pull-requests to peek under the hood of our controllers, APIs, service layers, and DAOs. 
           I will forever be grateful to my offshore colleagues for their help getting me started with server side programming.
           They were generous enough to review my early Java code and give me pointers when I needed to debug. 
-          To better cement my understanding, I built a <a href="https://top5.myascendmath.com" target="_blank"> full-stack in-house productivity app</a> for my boss.
+          To better cement my understanding, I built a <a href="http://top5.myascendmath.com" target="_blank"> full-stack in-house productivity app</a> for my boss.
           I'm proud to say the team still uses it on a weekly basis, 8 years later.
           <br></br>
           <br></br>
