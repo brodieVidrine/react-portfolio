@@ -2,11 +2,9 @@ import React from "react";
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
-import NavBar from "../components/NavBar";
-import ContentArea from "../components/ContentArea";
 import DemoThumb from "../components/DemoThumb";
 
-import Container from 'react-bootstrap/Container';
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -14,6 +12,7 @@ import bcThumb from "../static/gr/bcThumb.png";
 import rocketThumb from "../static/gr/rocketThumb.png";
 import expThumb from "../static/gr/expThumb.png";
 import canyonThumb from "../static/gr/canyonThumb.png";
+import ContentWrapper from "../components/ContentWrapper";
 
 const thumbs = [
     {
@@ -67,10 +66,7 @@ function WebPortfolio(){
     }
 
     return(
-        
-        <Container fluid className="bgc  min-vh-100 d-flex flex-column">
-            <NavBar></NavBar>
-            <ContentArea>
+            <ContentWrapper>
                 <h1 className="w-75 mx-auto mt-5 text-center">Web Portfolio</h1>
                 <br></br>
                 <Row xs={1} md={2} className="g-4">
@@ -93,8 +89,7 @@ function WebPortfolio(){
                     </Modal.Header>
                     <Modal.Body className="text-center">{demoFrame}</Modal.Body>
                 </Modal>
-            </ContentArea>
-        </Container>
+            </ContentWrapper>
     )
 }
 

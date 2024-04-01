@@ -52,6 +52,12 @@ a{
   font-weight: bold;
 }
 
+.stinkinBadge{
+  cursor:pointer;
+  box-shadow:2px 2px 3px #000; 
+  background-color:rgba(0, 0, 0, .1);
+}
+
 .bgc{
   background-color:#86B6F6;
   padding:0px;
