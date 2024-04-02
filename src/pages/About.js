@@ -11,7 +11,8 @@ function About() {
           My name is Brodie Vidrine. I've been writing code for the web for over a decade.
           <br></br>
           <br></br>
-          My journey into programming didn't start in Computer Science. Summit Interactive hired me to shoot, direct, edit, and publish math DVDs and ROMs.
+          My journey into programming didn't start in Computer Science. 
+          Summit Interactive hired me to shoot, direct, edit, and publish math videos.
           While flying to Nebraska to film Algebra problems has its own charms, 
           the company's web-developer seemed to be having more fun writing minigames in Flash. 
           So, I purchased a book on Object Oriented Programming in ActionScript and started learning in my free time. 

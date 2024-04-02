@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import './index.css';
 import About from './pages/About';
@@ -23,6 +26,11 @@ import './App.css';
 
 
 Amplify.configure(config);
+
+const client = new ApolloClient({
+  uri: 'https://graphqlpokemon.favware.tech/v8',
+  cache: new InMemoryCache(),
+});
 
 const router = createBrowserRouter([
   {
@@ -43,10 +51,13 @@ const router = createBrowserRouter([
   }
 ]);
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <ApolloProvider client={client}>
+      <RouterProvider router={router}/>
+    </ApolloProvider>
   </React.StrictMode>
 );
 
