@@ -20,6 +20,15 @@ const GET_POKEMON = gql`
 }
 `;
 
+function toTitleCase(str) {
+    return str.replace(
+    /\w\S*/g,
+    function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+    );
+}
+
 function GrabPokemon({
     dex
 }){
@@ -31,15 +40,15 @@ function GrabPokemon({
 
     return(
         
-        <Row>    
+        <Row className="text-center">    
             <Col>
                 <h2>Player 1 got a:</h2>
-                <h3>{data.poke1.species}!</h3>
+                <h3>{toTitleCase(data.poke1.species)}!</h3>
                 <img src={data.poke1.sprite}></img>
             </Col>
             <Col>
                 <h2>CPU got a:</h2>
-                <h3>{data.poke2.species}!</h3>
+                <h3>{toTitleCase(data.poke2.species)}!</h3>
                 <img src={data.poke2.sprite}></img>
             </Col>
         </Row>
