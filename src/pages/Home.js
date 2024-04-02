@@ -5,6 +5,7 @@ import ContentWrapper from "../components/ContentWrapper";
 
 import { Row, Col } from "react-bootstrap";
 import Modal from 'react-bootstrap/Modal';
+import { Link } from "react-router-dom";
 
 import reactThumb from '../static/gr/badges/smReact.png';
 import awsThumb from '../static/gr/badges/smAWS.png';
@@ -50,8 +51,8 @@ const badges = [
     },{
         id:6,
         thumb: mongoThumb,
-        alt: "Mongo DB",
-        hover: "This site stores its data in MongoDB tables, hosted by Amazon RWS. I'm relatively new to NoSQL DBs, but I love how easy they are to work with!"
+        alt: "Dynammo DB",
+        hover: "This site stores its data in Dynammo DB tables, hosted by Amazon RWS. I'm relatively new to NoSQL DBs, but I love how easy they are to work with!"
     }
 ];
 
@@ -86,7 +87,7 @@ function HomePage(){
                         Want to take a peek under the hood? I've made the <a href="https://github.com/brodieVidrine/react-portfolio/tree/main/src" target="_blank">Git repository</a> public so you can see how it all fits together.
                         <br ></br>
                         <br ></br>
-                        If you click the "Bro-Notes" link in the nav bar, you'll find a full-stack example that uses GraphQL, NoSQL (MongoDB), and an external API (AWS Authentication).
+                        If you click the <Link to="/brokemonArena">Brokémon Arena</Link> link in the nav bar, you'll find a full-stack example that uses GraphQL, NoSQL (DynammoDB), and an external API (AWS Authentication).
                     </p>
                 </Row>
                 <Row className="justify-content-center flex-grow-1 mt-5" sm={"auto"}> 
