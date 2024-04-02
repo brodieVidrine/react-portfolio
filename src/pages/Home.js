@@ -48,12 +48,13 @@ const badges = [
         thumb: graphThumb,
         alt: "GraphQL",
         hover: "This react project has GraphQL installed to communicate with external APIs and to store data locally."
-    },{
+    }/*
+    ,{
         id:6,
         thumb: mongoThumb,
         alt: "Dynammo DB",
         hover: "This site stores its data in Dynammo DB tables, hosted by Amazon RWS. I'm relatively new to NoSQL DBs, but I love how easy they are to work with!"
-    }
+    }*/
 ];
 
 function HomePage(){
@@ -87,7 +88,7 @@ function HomePage(){
                         Want to take a peek under the hood? I've made the <a href="https://github.com/brodieVidrine/react-portfolio/tree/main/src" target="_blank">Git repository</a> public so you can see how it all fits together.
                         <br ></br>
                         <br ></br>
-                        If you click the <Link to="/brokemonArena">Brokémon Arena</Link> link in the nav bar, you'll find a full-stack example that uses GraphQL, NoSQL (DynammoDB), and an external API (AWS Authentication).
+                        If you click the <Link to="/brokemonArena">Brokémon Arena</Link> link in the nav bar, you'll find a GraphQL example. Still adding functionality. Should be playable by 4/5/23. 
                     </p>
                 </Row>
                 <Row className="justify-content-center flex-grow-1 mt-5" sm={"auto"}> 

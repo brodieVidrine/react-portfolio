@@ -5,14 +5,14 @@ import ContentWrapper from "../components/ContentWrapper";
 import { Row, Col } from "react-bootstrap";
 
 const GET_POKEMON = gql`
-{
-    poke1: getPokemonByDexNumber(number:42) {
+query someName($id1:Int!, $id2:Int!){
+    poke1: getPokemonByDexNumber(number:$id1) {
       species
       sprite
       baseStatsTotal
     }
 
-    poke2: getPokemonByDexNumber(number:99) {
+    poke2: getPokemonByDexNumber(number:$id2) {
         species
         sprite
         baseStatsTotal
@@ -33,7 +33,11 @@ function GrabPokemon({
     dex
 }){
     console.log("dex = >", dex);
-    const { loading, error, data } = useQuery(GET_POKEMON);
+    var p1=5;
+    var p2=35;
+
+    const { loading, error, data } = useQuery(GET_POKEMON, {variables:{p1, p2},
+    });
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error : {error.message}</p>;
@@ -67,6 +71,7 @@ function BrokemonArena(){
     return(
         <ContentWrapper>
                 <h1>Brokémon Arena</h1>
+                <h2>Still wiring the API to the game. Check back soon. (BV-4/2/24)</h2>
                 <br></br>
                 <GrabPokemon dex={55}></GrabPokemon>
         </ContentWrapper>
