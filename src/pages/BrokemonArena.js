@@ -2,14 +2,21 @@ import React from "react";
 import { useQuery, gql } from '@apollo/client';
 
 import ContentWrapper from "../components/ContentWrapper";
+import { Row, Col } from "react-bootstrap";
 
 const GET_POKEMON = gql`
 {
-    getPokemonByDexNumber(number:42) {
+    poke1: getPokemonByDexNumber(number:42) {
       species
       sprite
       baseStatsTotal
     }
+
+    poke2: getPokemonByDexNumber(number:99) {
+        species
+        sprite
+        baseStatsTotal
+      }
 }
 `;
 
@@ -23,14 +30,19 @@ function GrabPokemon({
     if (error) return <p>Error : {error.message}</p>;
 
     return(
-        <div>
-        <h2>Player 1 got a:</h2>
-        <h3>{data.getPokemonByDexNumber.species}!</h3>
-        <img src={data.getPokemonByDexNumber.sprite}></img>
-        <br />
         
-        <br />
-        </div>
+        <Row>    
+            <Col>
+                <h2>Player 1 got a:</h2>
+                <h3>{data.poke1.species}!</h3>
+                <img src={data.poke1.sprite}></img>
+            </Col>
+            <Col>
+                <h2>CPU got a:</h2>
+                <h3>{data.poke2.species}!</h3>
+                <img src={data.poke2.sprite}></img>
+            </Col>
+        </Row>
     );
 }
 
