@@ -5,14 +5,14 @@ import ContentWrapper from "../components/ContentWrapper";
 import { Row, Col } from "react-bootstrap";
 
 const GET_POKEMON = gql`
-query someName($id1:Int!, $id2:Int!){
-    poke1: getPokemonByDexNumber(number:$id1) {
+{
+    poke1: getPokemonByDexNumber(number:75) {
       species
       sprite
       baseStatsTotal
     }
 
-    poke2: getPokemonByDexNumber(number:$id2) {
+    poke2: getPokemonByDexNumber(number:130) {
         species
         sprite
         baseStatsTotal
@@ -36,8 +36,7 @@ function GrabPokemon({
     var p1=5;
     var p2=35;
 
-    const { loading, error, data } = useQuery(GET_POKEMON, {variables:{p1, p2},
-    });
+    const { loading, error, data } = useQuery(GET_POKEMON);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error : {error.message}</p>;
