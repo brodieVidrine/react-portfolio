@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery, gql} from '@apollo/client';
 
 import ContentWrapper from "../components/ContentWrapper";
+import Brokemon from "../components/Brokemon";
 import { Row, Col } from "react-bootstrap";
 
 const generateRandom = () => {
@@ -13,21 +14,31 @@ const generateRandom = () => {
 
 const GET_POKEMON = gql`
 {
-    poke1:  getPokemonByDexNumber(number: ${ generateRandom() } ) {
-                species
-                sprite
-                baseStatsTotal
+    poke1: getPokemonByDexNumber(number: ${ generateRandom() } ) {
+            species
+            sprite
+            baseStatsTotal
+            baseStats {
+                hp
+            },
+            flavorTexts {
+                flavor
+            }
     }
 
-    poke2:  getPokemonByDexNumber(number: ${ generateRandom() } ) {
+    poke2: getPokemonByDexNumber(number: ${ generateRandom() } ) {
         species
         sprite
         baseStatsTotal
+        baseStats {
+            hp
+        },
+        flavorTexts {
+            flavor
+        }
     }
 }
 `;
-
-console.log("get pokemon = ", GET_POKEMON);
 
 function toTitleCase(str) {
     return str.replace(
@@ -49,20 +60,31 @@ function GrabPokemon({
     if (error) return <p>Error : {error.message}</p>;
 
     return(
-        
-        <Row className="text-center">    
-            <Col>
-                <h2>Player 1 got a:</h2>
-                <h3>{toTitleCase(data.poke1.species)}!</h3>
-                <img src={data.poke1.sprite}></img>
+        <Row >
+           {console.log("data ", data)} 
+            <Col  >
+                <h2>Player-1 got a:</h2>
+                <br></br>
+                <Brokemon  species={ toTitleCase(data.poke1.species)  }
+                    sprite={data.poke1.sprite}
+                    descr={data.poke1.flavorTexts[0].flavor}
+                    hp={data.poke1.baseStats.hp}
+                    totalCP={data.poke1.baseStatsTotal}
+                ></Brokemon>
             </Col>
-            <Col>
+            <Col  >
                 <h2>CPU got a:</h2>
-                <h3>{toTitleCase(data.poke2.species)}!</h3>
-                <img src={data.poke2.sprite}></img>
+                <br></br>
+                <Brokemon  species={  toTitleCase( data.poke2.species ) }
+                    sprite={data.poke2.sprite}
+                    descr={data.poke2.flavorTexts[0].flavor}
+                    hp={data.poke2.baseStats.hp}
+                    totalCP={data.poke2.baseStatsTotal}
+                ></Brokemon>
             </Col>
-            
+        
         </Row>
+        
     );
 }
 
