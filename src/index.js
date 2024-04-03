@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
-
+import { HttpLink } from '@apollo/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -27,9 +27,26 @@ import './App.css';
 
 Amplify.configure(config);
 
-const client = new ApolloClient({
-  uri: 'https://graphqlpokemon.favware.tech/v8',
-  cache: new InMemoryCache(),
+// Instantiate required constructor fields
+const cache = new InMemoryCache();
+const link = new HttpLink({
+  uri: 'https://graphqlpokemon.favware.tech/v8'
+});
+
+export const client = new ApolloClient({
+  // Provide required constructor fields
+  cache: cache,
+  link: link,
+
+  // Provide some optional constructor fields
+  name: 'graphql-pokemon-client',
+  version: '1.0',
+  queryDeduplication: false,
+  defaultOptions: {
+    watchQuery: {
+      fetchPolicy: 'cache-and-network'
+    }
+  }
 });
 
 const router = createBrowserRouter([
@@ -55,7 +72,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
+    <ApolloProvider client={client} link={link}> 
       <RouterProvider router={router}/>
     </ApolloProvider>
   </React.StrictMode>

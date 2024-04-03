@@ -1,24 +1,33 @@
 import React from "react";
-import { useQuery, gql } from '@apollo/client';
+import { useQuery, gql} from '@apollo/client';
 
 import ContentWrapper from "../components/ContentWrapper";
 import { Row, Col } from "react-bootstrap";
 
+const generateRandom = () => {
+    const randomMon = Math.floor(Math.random() * 150) + 1;
+    let query = String(randomMon);
+  
+    return query;
+}
+
 const GET_POKEMON = gql`
 {
-    poke1: getPokemonByDexNumber(number:75) {
-      species
-      sprite
-      baseStatsTotal
+    poke1:  getPokemonByDexNumber(number: ${ generateRandom() } ) {
+                species
+                sprite
+                baseStatsTotal
     }
 
-    poke2: getPokemonByDexNumber(number:130) {
+    poke2:  getPokemonByDexNumber(number: ${ generateRandom() } ) {
         species
         sprite
         baseStatsTotal
-      }
+    }
 }
 `;
+
+console.log("get pokemon = ", GET_POKEMON);
 
 function toTitleCase(str) {
     return str.replace(
@@ -33,8 +42,6 @@ function GrabPokemon({
     dex
 }){
     console.log("dex = >", dex);
-    var p1=5;
-    var p2=35;
 
     const { loading, error, data } = useQuery(GET_POKEMON);
 
@@ -54,23 +61,17 @@ function GrabPokemon({
                 <h3>{toTitleCase(data.poke2.species)}!</h3>
                 <img src={data.poke2.sprite}></img>
             </Col>
+            
         </Row>
     );
 }
 
 
 function BrokemonArena(){
-    
-    const { loading, error, data } = useQuery(GET_POKEMON);
-
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error : {error.message}</p>;
-
 
     return(
         <ContentWrapper>
                 <h1>Brokémon Arena</h1>
-                <h2>Still wiring the API to the game. Check back soon. (BV-4/2/24)</h2>
                 <br></br>
                 <GrabPokemon dex={55}></GrabPokemon>
         </ContentWrapper>
