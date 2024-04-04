@@ -90,7 +90,7 @@ function HomePage(){
                         <br ></br>
                         If you click the <Link to="/brokemonArena">Brokémon Arena</Link> link in the nav bar, you'll find a GraphQL example. Should be fully functional by the weekend. 
                         <br></br>
-                        --BV, 4/24. 
+                        --BV, 4/4/24 
                     </p>
                 </Row>
                 <Row className="justify-content-center flex-grow-1 mt-5" sm={"auto"}> 
