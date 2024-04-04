@@ -28,10 +28,10 @@ function About() {
           <br></br>
           While at ULL, I took a semester of intro Python and another semester of object-oriented-programming for C++. 
           As I was completing these courses, Steve Jobs announced that Flash would not be supported on the new iPad.
-          This was of great concern to my old employers because they'd built a library of educational minigames in Flash for their own cloud-based app.
-          I maintained a steady stream of part-time converting their key Flash modules using HTML5 elements like Canvas, Video, and Audio. 
-          My bosses offered me the chance to work remote, full-time, at a substantially increased hourly rate.
-          After completing my second semester at ULL, I returned to work for Summit Interactive's sister company, Ascend Math. 
+          This was of great concern to my old employers because they'd built a library of educational minigames in Flash for their online math application.
+          We'd maintained a good relationship, so they hired me to work part time. 
+          In between classes, I was often in the library converting their key Flash modules using HTML5 elements like Canvas, Video, and Audio.
+          After completing my second semester at ULL, I was offered the chance to work fulltime (and remote) for Summit Interactive's sister company, Ascend Math. 
           <br></br>
           <br></br>
           One of my first major projects was building a plugin-free, touch-friendly mini-game template.
