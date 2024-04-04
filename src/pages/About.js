@@ -26,12 +26,15 @@ function About() {
           Within a year of learning ActionScript, I decided to leave my job and enroll in the University of Louisiana at Lafayette's Computer Science program. 
           <br></br>
           <br></br>
-          While at ULL, I took a semester of intro Python and another semester of object-oriented-programming for C++. As I was completing these courses, Steve Jobs announced that Flash would not be supported on the new iPad.
-          This was of great concern to my old employers because they'd built a library of educational minigames in Flash for their own cloud-based app. They asked me to build an HTML5/JavaScript prototype of their flagship game, Flash Card Math.
-          They asked me, and several other developers, to develop a template for a plugin-free, touch-friendly mini-game template. My bosses offered me the chance to work remote, full-time, at a substantially increased hourly rate.
+          While at ULL, I took a semester of intro Python and another semester of object-oriented-programming for C++. 
+          As I was completing these courses, Steve Jobs announced that Flash would not be supported on the new iPad.
+          This was of great concern to my old employers because they'd built a library of educational minigames in Flash for their own cloud-based app.
+          I maintained a steady stream of part-time converting their key Flash modules using HTML5 elements like Canvas, Video, and Audio. 
+          My bosses offered me the chance to work remote, full-time, at a substantially increased hourly rate.
           After completing my second semester at ULL, I returned to work for Summit Interactive's sister company, Ascend Math. 
           <br></br>
           <br></br>
+          One of my first major projects was building a plugin-free, touch-friendly mini-game template.
           I was put in charge of a small team of temp offshore developers and together we reprogrammed dozens of minigames over an intense summer. 
           By the end of my first year with Ascend, I'd rewritten all of the site's Flash modules and Java Applets with HTML5 and JavaScript.
           Getting Ascend Math to work without the use of plugins was a huge milestone and a great boon for the sales team. 
@@ -57,7 +60,7 @@ function About() {
           <br></br>
           In my free time, I enjoy writing code in C# (Unity) and Luau (Roblox Studio). 
           I'm currently working on a "tower defense" game with my 9 year old. He builds the maps and I handle the scripting. 
-          This brings me joy I can't describe in plain English.
+          This brings me tremendous joy.
           <br></br><br></br>
           Unfortunately, my current employer is restructuring and I now find myself looking for my next opportunity. 
           I hope I can be of use to your organization. I'm extremely loyal and I genuinely love learning and helping out.

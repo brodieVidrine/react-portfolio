@@ -68,7 +68,10 @@ function WebPortfolio(){
     return(
             <ContentWrapper>
                 <h1 className="w-75 mx-auto mt-5 text-center">Web Portfolio</h1>
-                <br></br>
+                <p>
+                    Click any of the thumbnails to open an interactive HTML5/JS demo. This is just a small sample of my work at Ascend Math.
+                    These files are not available in the site Git repository, but <span style={{fontStyle:"italic"}}>are</span> hosted with permission from Ascend's CEO. I set up a CDN using AWS S3 buckets and and AWS CloudFormation template.
+                </p>
                 <Row xs={1} md={2} className="g-4">
                     {thumbs.map( data =>
                     <Col key={data.id}>

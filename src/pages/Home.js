@@ -11,7 +11,7 @@ import reactThumb from '../static/gr/badges/smReact.png';
 import awsThumb from '../static/gr/badges/smAWS.png';
 import npmThumb from '../static/gr/badges/smNPM.png';
 import graphThumb from '../static/gr/badges/smGraph.png';
-import mongoThumb from '../static/gr/badges/smMongo.png';
+import mongoThumb from '../static/gr/badges/smDynamo.png';
 import routerThumb from '../static/gr/badges/smRouter.png';
 import bootThumb from '../static/gr/badges/smBoot.png';
 import SmartImage from "../components/SmartImage";
@@ -47,14 +47,14 @@ const badges = [
         id:5,
         thumb: graphThumb,
         alt: "GraphQL",
-        hover: "This react project has GraphQL installed to communicate with external APIs and to store data locally."
-    }/*
+        hover: "This react project uses GraphQL for internal and external queries. I'm handling calls to the Pokemon-GQL server with Apollo Client."
+    },
     ,{
         id:6,
         thumb: mongoThumb,
-        alt: "Dynammo DB",
-        hover: "This site stores its data in Dynammo DB tables, hosted by Amazon RWS. I'm relatively new to NoSQL DBs, but I love how easy they are to work with!"
-    }*/
+        alt: "DynamoDB",
+        hover: "This site stores its data in DynamoDB tables, hosted by Amazon RWS. I'm relatively new to NoSQL DBs, but I love how easy they are to set up and deploy with Amplify!"
+    }
 ];
 
 function HomePage(){
