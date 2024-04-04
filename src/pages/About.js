@@ -1,5 +1,6 @@
 import React from 'react';
 import ContentWrapper from '../components/ContentWrapper';
+import { Link } from 'react-router-dom';
 
 
 function About() {
@@ -34,7 +35,7 @@ function About() {
           After completing my second semester at ULL, I was offered the chance to work fulltime (and remote) for Summit Interactive's sister company, Ascend Math. 
           <br></br>
           <br></br>
-          One of my first major projects was building a plugin-free, touch-friendly mini-game template.
+          One of my first major projects was building a plugin-free, touch-friendly mini-game template. (If you open up "Canyon Escape" or "Rocket Gal" in my <Link to="/webPortfolio" target="_blank">Web Portfolio</Link>, you can see an example.)
           I was put in charge of a small team of temp offshore developers and together we reprogrammed dozens of minigames over an intense summer. 
           By the end of my first year with Ascend, I'd rewritten all of the site's Flash modules and Java Applets with HTML5 and JavaScript.
           Getting Ascend Math to work without the use of plugins was a huge milestone and a great boon for the sales team. 

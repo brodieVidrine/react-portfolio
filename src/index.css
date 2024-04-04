@@ -64,6 +64,10 @@ a{
   background-color:rgba(105, 123, 125, .3);
 }
 
+.pokeGif{
+  max-height: 20vh;  
+}
+
 .bgc{
   background-color:#86B6F6;
   padding:0px;

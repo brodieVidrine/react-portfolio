@@ -93,7 +93,11 @@ function BrokemonArena(){
         <ContentWrapper>
                 <h1>Brokémon Arena</h1>
                 <br></br>
-                <p>Welcome to the arena! In this example, I'm using the Apollo Client and  GraphQL to fetch a pair of random "Brokémon". Battle feature and leaderboard coming soon. BV, 4/3/24</p>
+                <p>
+                    Welcome to the arena! 
+                    In this example, I'm using the Apollo Client and  GraphQL to fetch a pair of random "Brokémon". 
+                    Battle feature and leaderboard coming soon. BV, 4/4/24
+                </p>
                 <GrabPokemon dex={55}></GrabPokemon>
         </ContentWrapper>
     )

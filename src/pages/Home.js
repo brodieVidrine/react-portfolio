@@ -88,7 +88,9 @@ function HomePage(){
                         Want to take a peek under the hood? I've made the <a href="https://github.com/brodieVidrine/react-portfolio/tree/main/src" target="_blank">Git repository</a> public so you can see how it all fits together.
                         <br ></br>
                         <br ></br>
-                        If you click the <Link to="/brokemonArena">Brokémon Arena</Link> link in the nav bar, you'll find a GraphQL example. Still adding functionality. Should be playable by 4/3/24. 
+                        If you click the <Link to="/brokemonArena">Brokémon Arena</Link> link in the nav bar, you'll find a GraphQL example. Should be fully functional by the weekend. 
+                        <br></br>
+                        --BV, 4/24. 
                     </p>
                 </Row>
                 <Row className="justify-content-center flex-grow-1 mt-5" sm={"auto"}> 
