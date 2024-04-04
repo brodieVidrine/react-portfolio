@@ -3,7 +3,7 @@ import { useQuery, gql} from '@apollo/client';
 
 import ContentWrapper from "../components/ContentWrapper";
 import Brokemon from "../components/Brokemon";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Spinner } from "react-bootstrap";
 
 const generateRandom = () => {
     const randomMon = Math.floor(Math.random() * 150) + 1;
@@ -56,7 +56,7 @@ function GrabPokemon({
 
     const { loading, error, data } = useQuery(GET_POKEMON);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <Spinner className="mx-auto" animation="border" />;
     if (error) return <p>Error : {error.message}</p>;
 
     return(
