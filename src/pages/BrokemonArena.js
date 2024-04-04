@@ -60,11 +60,9 @@ function GrabPokemon({
     if (error) return <p>Error : {error.message}</p>;
 
     return(
-        <Row >
-           {console.log("data ", data)} 
-            <Col  >
-                <h2>Player-1 got a:</h2>
-                <br></br>
+        <Row className="d-flex align-items-stretch">
+           
+            <Col className="d-flex align-items-stretch" >
                 <Brokemon  species={ toTitleCase(data.poke1.species)  }
                     sprite={data.poke1.sprite}
                     descr={data.poke1.flavorTexts[0].flavor}
@@ -72,9 +70,10 @@ function GrabPokemon({
                     totalCP={data.poke1.baseStatsTotal}
                 ></Brokemon>
             </Col>
-            <Col  >
-                <h2>CPU got a:</h2>
-                <br></br>
+            <Col className="col-2 text-center d-flex align-items-stretch">
+                <h3 className="mx-auto align-self-center">VS</h3>
+            </Col>
+            <Col className="d-flex align-items-stretch" >
                 <Brokemon  species={  toTitleCase( data.poke2.species ) }
                     sprite={data.poke2.sprite}
                     descr={data.poke2.flavorTexts[0].flavor}
@@ -82,7 +81,6 @@ function GrabPokemon({
                     totalCP={data.poke2.baseStatsTotal}
                 ></Brokemon>
             </Col>
-        
         </Row>
         
     );
@@ -95,6 +93,7 @@ function BrokemonArena(){
         <ContentWrapper>
                 <h1>Brokémon Arena</h1>
                 <br></br>
+                <p>Welcome to the arena! In this example, I'm using the Apollo Client and  GraphQL to fetch a pair of random "Brokémon". Battle feature and leaderboard coming soon. BV, 4/3/24</p>
                 <GrabPokemon dex={55}></GrabPokemon>
         </ContentWrapper>
     )

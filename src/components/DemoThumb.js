@@ -16,7 +16,7 @@ function DemoThumb({
  return (
     
     <Card className="demoCard border-secondary" onClick={clicked}>
-        <Card.Img variant="top" alt="demo thumnail" src={img} />
+        <Card.Img className="object-fit-scale border rounded" variant="top" alt="broke gif" src={img} />
         <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>

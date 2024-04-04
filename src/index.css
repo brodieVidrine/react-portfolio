@@ -55,7 +55,13 @@ a{
 .stinkinBadge{
   cursor:pointer;
   box-shadow:2px 2px 3px #000; 
-  background-color:rgba(0, 0, 0, .1);
+  background-color:rgba(205, 245, 253, .3);
+}
+
+.stinkinBadge:hover{
+  cursor:pointer;
+  box-shadow:1px 1px 1px #000; 
+  background-color:rgba(105, 123, 125, .3);
 }
 
 .bgc{
