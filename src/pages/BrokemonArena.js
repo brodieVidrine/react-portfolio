@@ -18,23 +18,55 @@ const GET_POKEMON = gql`
             species
             sprite
             baseStatsTotal
+            types {
+                name
+            }
             baseStats {
                 hp
-            },
+            }
             flavorTexts {
                 flavor
             }
+            learnsets {
+                generation8 {
+                  levelUpMoves {
+                    level
+                    move {
+                      type
+                      name
+                      shortDesc
+                      category
+                    }
+                  }
+                }
+              }
     }
 
     poke2: getPokemonByDexNumber(number: ${ generateRandom() } ) {
         species
         sprite
         baseStatsTotal
+        types {
+            name
+        }
         baseStats {
             hp
         },
         flavorTexts {
             flavor
+        }
+        learnsets {
+            generation8 {
+              levelUpMoves {
+                level
+                move {
+                  type
+                  name
+                  shortDesc
+                  category
+                }
+              }
+            }
         }
     }
 }
@@ -50,9 +82,8 @@ function toTitleCase(str) {
 }
 
 function GrabPokemon({
-    dex
+    
 }){
-    console.log("dex = >", dex);
 
     const { loading, error, data } = useQuery(GET_POKEMON);
 
@@ -68,9 +99,11 @@ function GrabPokemon({
                     descr={data.poke1.flavorTexts[0].flavor}
                     hp={data.poke1.baseStats.hp}
                     totalCP={data.poke1.baseStatsTotal}
+                    types={data.poke1.types}
+                    moves={ data.poke1.learnsets.generation8.levelUpMoves }
                 ></Brokemon>
             </Col>
-            <Col className="col-2 text-center d-flex align-items-stretch">
+            <Col className="col-1 text-center d-flex align-items-stretch">
                 <h3 className="mx-auto align-self-center">VS</h3>
             </Col>
             <Col className="d-flex align-items-stretch" >
@@ -79,6 +112,8 @@ function GrabPokemon({
                     descr={data.poke2.flavorTexts[0].flavor}
                     hp={data.poke2.baseStats.hp}
                     totalCP={data.poke2.baseStatsTotal}
+                    types={data.poke2.types}
+                    moves={ data.poke2.learnsets.generation8.levelUpMoves } 
                 ></Brokemon>
             </Col>
         </Row>
@@ -98,7 +133,7 @@ function BrokemonArena(){
                     In this example, I'm using the Apollo Client and  GraphQL to fetch a pair of random "Brokémon". 
                     Battle feature and leaderboard coming soon. --BV, 4/4/24
                 </p>
-                <GrabPokemon dex={55}></GrabPokemon>
+                <GrabPokemon></GrabPokemon>
         </ContentWrapper>
     )
 }

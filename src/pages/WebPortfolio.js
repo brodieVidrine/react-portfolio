@@ -19,7 +19,7 @@ const thumbs = [
     id: 0,
     name: 'Base Camp',
     frame: (
-        <iframe id="bcFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/basecamp.html" />
+        <iframe id="bcFrame" title="bcFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/basecamp.html" />
     ),
     description: 'I turned an HTML5 recreation of Wolfenstein 3D into a kid-friendly game hub.',
     imageId: bcThumb
@@ -27,7 +27,7 @@ const thumbs = [
     id: 1,
     name: 'Rocket Gal',
     frame: (
-        <iframe id="rocketFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/rocketgal/rocketgal.html" />
+        <iframe id="rocketFrame" title="rocketFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/rocketgal/rocketgal.html" />
     ),
     description: 'A minigame designed to help teach kids about visualzing fractions.',
     imageId: rocketThumb
@@ -35,7 +35,7 @@ const thumbs = [
     id: 2,
     name: 'Interactive Video Player',
     frame: (
-        <iframe id="expFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/stuex/html5videoplayer.html?videoPath=https://web29.streamhoster.com/ascendedu/01_01_C.mp4&userName=Recruiter&captionName=captions/captions_01_01_C.xml&problems=ivProblems/01_01_C.xml" />
+        <iframe id="expFrame" title="expFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/stuex/html5videoplayer.html?videoPath=https://web29.streamhoster.com/ascendedu/01_01_C.mp4&userName=Recruiter&captionName=captions/captions_01_01_C.xml&problems=ivProblems/01_01_C.xml" />
     ),
     description: "This is an iframe based video API that I created for Ascend. It accepts captions, interactivity (real time concept checks), and skin XMLs. ",
     imageId: expThumb
@@ -43,7 +43,7 @@ const thumbs = [
     id: 3,
     name: 'Canyon Escape',
     frame: (
-        <iframe id="canyonFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/canyonescape/canyon+Escape+1031.html" />
+        <iframe id="canyonFrame" title="canyonFrame" className="demoFrame border border-primary" src="https://amazon-cloudfront-secure-static-site--s3bucketroot-lkfdqdbtdcdt.s3.amazonaws.com/canyonescape/canyon+Escape+1031.html" />
     ),
     description: 'One of the most recent minigames, or "explorations", that I programmed. I used a tiling GUI to turn a sprite-sheet into this map.',
     imageId: canyonThumb
