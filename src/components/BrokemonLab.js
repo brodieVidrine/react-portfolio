@@ -53,7 +53,7 @@ function BrokemonLab({
         </Row>
         <Row className="w-75 mx-auto">
             <Col className="mx-3 mt-3 battle-message">
-                Welcome to Professor Brillow's Laboratory! 
+                Welcome to Professor Brodie's Laboratory! 
                 The professor has fetched two random Brokémon from an external database.
                 Click the "Battle" tab to continue. 
             </Col>
