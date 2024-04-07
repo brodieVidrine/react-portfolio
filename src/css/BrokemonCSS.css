@@ -1,14 +1,21 @@
+.field-gradient {
+    background: linear-gradient(0deg, #055719, #44a058, #85e99b, #00D4FF);
+}
+
 .pokeGif{
     max-height: 20vh;  
 }
 
+#battleMain{
+    height: 50svh;
+}
 
 #battleSpriteBack{
-    height: 35svh;
+    max-height: 25svh;
 }
 
 #battleSpriteFront{
-    height: 25svh;    
+    max-height: 35svh;    
 }
 
 

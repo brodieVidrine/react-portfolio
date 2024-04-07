@@ -2,6 +2,13 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import Brokemon from "./Brokemon";
 
+/**
+ * 
+ * This is where the player sees which "Brokemon" they've been dealt
+ * It's meant to look like a simple trading card
+ * --Brodie Vidrine, 2/24
+ */
+
 function toTitleCase(str) {
     return str.replace(
     /\w\S*/g,

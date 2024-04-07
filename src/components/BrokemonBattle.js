@@ -1,6 +1,15 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
+import BrokemonBattleField from "./BrokemonBattleField";
+import BrokemonBattleTerminal from "./BrokemonBattleTerminal";
+
+/**
+ * The battle screen. 
+ * Top half is the "battlefield".
+ * The bottom half (lower third?) is the "terminal"
+ * --Brodie Vidrine, 4/6/24
+ * * */
 
 function BrokemonBattle({
     player1,
@@ -8,38 +17,15 @@ function BrokemonBattle({
 }){
 
     return(
-        <>
-        <Row className="d-flex flex-grow-1">
-            <Col>
-                <Row>
-                    <Col>
-                        {cpu.species}
-                    </Col>
-                    <Col>
-                        CP:{cpu.baseStatsTotal}
-                    </Col>
-                </Row>
-            </Col>
-            <Col>
-                <img id="battleSpriteBack" src={cpu.sprite}></img>    
-            </Col>
-        </Row>
-        <Row>
-            <Col>
-                <img id="battleSpriteFront" src={player1.backSprite}></img>
-            </Col>
-            <Col>
-                <Row>
-                    <Col>
-                        {player1.species}
-                    </Col>
-                    <Col>
-                        CP:{player1.baseStatsTotal}
-                    </Col>
-                </Row>
-            </Col>
-        </Row>
-        </>
+        <div id="battleMain" className="mt-2 field-gradient rounded">
+           <BrokemonBattleField
+                player1={player1}
+                cpu={cpu} ></BrokemonBattleField>
+            <BrokemonBattleTerminal
+                moves={player1.learnsets.generation8}
+                species={player1.species}
+            ></BrokemonBattleTerminal>
+        </div>
     )
 }
 
