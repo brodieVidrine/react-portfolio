@@ -4,6 +4,15 @@ import { Row, Col } from "react-bootstrap";
 import BrokemonBattleField from "./BrokemonBattleField";
 import BrokemonBattleTerminal from "./BrokemonBattleTerminal";
 
+
+function toTitleCase(str) {
+    return str.replace(
+    /\w\S*/g,
+    function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+    );
+}
 /**
  * The battle screen. 
  * Top half is the "battlefield".
@@ -23,7 +32,7 @@ function BrokemonBattle({
                 cpu={cpu} ></BrokemonBattleField>
             <BrokemonBattleTerminal
                 moves={player1.learnsets.generation8.levelUpMoves}
-                species={player1.species}
+                species={ toTitleCase(player1.species)}
             ></BrokemonBattleTerminal>
         </div>
     )

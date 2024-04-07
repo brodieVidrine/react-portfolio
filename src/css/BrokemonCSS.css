@@ -4,6 +4,7 @@
 
 #battleTerminal {
     background: linear-gradient(0deg, #4d4e4d, #e6ece8, #e6ece8, #424546);
+    border-top: 4px solid darkgray;
 }
 
 .battle-message{

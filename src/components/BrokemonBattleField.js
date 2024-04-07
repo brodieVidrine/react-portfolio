@@ -9,18 +9,30 @@ import { Row, Col } from "react-bootstrap";
  * --Brodie Vidrine, 4/6/24
  */
 
+function toTitleCase(str) {
+    return str.replace(
+    /\w\S*/g,
+    function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+    );
+}
+
 function BrokemonBattleField({
     player1,
     cpu
 }){
-
+    
+    const p1Species = toTitleCase( player1.species );
+    const cpuSpecies = toTitleCase( cpu.species );
+    
     return(
         <Row className="field-gradient">
             <Row className="h-50">
                 <Col>
                     <Row>
                         <Col>
-                            {cpu.species}
+                            {cpuSpecies}
                         </Col>
                         <Col>
                             CP:{cpu.baseStatsTotal}
@@ -38,7 +50,7 @@ function BrokemonBattleField({
                 <Col>
                     <Row >
                         <Col>
-                            {player1.species}
+                            {p1Species}
                         </Col>
                         <Col>
                             CP:{player1.baseStatsTotal}
