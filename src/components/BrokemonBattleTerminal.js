@@ -30,7 +30,8 @@ function getAttacks(moves){
             
     });
     */
-    bestFour = attacks.slice(-4);
+    bestFour = attacks;
+    
     return bestFour;
 }
 
