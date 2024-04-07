@@ -1,0 +1,109 @@
+.pokeGif{
+    max-height: 20vh;  
+}
+
+
+#battleSpriteBack{
+    height: 35svh;
+}
+
+#battleSpriteFront{
+    height: 25svh;    
+}
+
+
+.typeBadge{
+    border-radius: 3px;
+    padding: 2px;
+    font-weight:bold;
+}
+  
+.PoisonBadge{
+    background-color: purple;
+    color: white;
+}
+  
+.DarkBadge{
+    background-color: black;
+    color: white;
+}
+  
+.GrassBadge{
+    background-color: green;
+    color: white;
+}
+  
+.SteelBadge{
+    background-color: darkgrey;
+    color: black;
+}
+  
+.BugBadge{
+    background-color: yellowgreen;
+    color: black;
+}
+  
+.FightingBadge{
+    background-color: darkred;
+    color: white;
+}
+  
+.NormalBadge{
+    background-color: darkgrey;
+    color: white;
+}
+  
+.WaterBadge{
+    background-color: blue;
+    color: white;
+}
+  
+.RockBadge{
+    background-color: burlywood;
+    color: black;
+}
+  
+.FireBadge{
+    background-color: red;
+    color: white;
+}
+  
+.GroundBadge{
+    background-color: brown;
+    color: white;
+}
+  
+.IceBadge{
+    background-color: lightblue;
+    color: black;
+}
+  
+.FlyingBadge{
+    background-color: skyblue;
+    color: black;
+}
+  
+.ElectricBadge{
+    background-color: yellow;
+    color: black;
+}
+  
+.PsychicBadge{
+    background-color: palevioletred;
+    color: white;
+}
+  
+.FairyBadge{
+    background-color: pink;
+    color: black;  
+}
+  
+.GhostBadge{
+    background-color: darkblue;
+    color: white;
+}
+  
+.DragonBadge{
+    background-color: indigo;
+    color: white;
+}

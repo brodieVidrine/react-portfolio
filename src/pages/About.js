@@ -42,8 +42,8 @@ function About() {
           <br></br>
           <br></br>
           Our next major system upgrade came when we migrated from Struts 1 to Spring MVC in 2016. 
-          I was tasked with completing the UI side conversions, updating ancient pages with Web 2.0 best practices. 
-          We took pages that were heavily reliant on session attributes and moved to AJAX driven by RESTful services.
+          I was tasked with completing the UI side conversions--updating ancient pages with Web 2.0 best practices. 
+          We took pages that were heavily reliant on session attributes and moved to AJAX driven, RESTful services.
           <br></br>
           <br></br>
           At the time, we decided to move our code repository from SVN (Apache Subversion) to Git. As our company "commited" to best practices, it made learning from my teammates much easier.
