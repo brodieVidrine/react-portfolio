@@ -18,7 +18,7 @@ import '../css/BrokemonCSS.css';
 function BrokemonArena(){
 
     return(
-        <Container fluid className="bgc min-vh-100 d-flex flex-column ">
+        <Container fluid className="bgc min-vh-100 rounded" rounded>
             <NavBar></NavBar>
             <Row className="w-75 brokeContent mx-auto text-center">
                 <h1>Brokémon Arena</h1>

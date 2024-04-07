@@ -17,7 +17,7 @@ function BrokemonBattle({
 }){
 
     return(
-        <div id="battleMain" className="mt-2">
+        <div id="battleMain" className="mt-2 rounded mx-2">
            <BrokemonBattleField
                 player1={player1}
                 cpu={cpu} ></BrokemonBattleField>

@@ -91,7 +91,7 @@ function BrokemonMain(){
 
     return (
     
-        <Tabs defaultActiveKey="brokeLab">
+        <Tabs defaultActiveKey="brokeLab" >
             <Tab eventKey="brokeLab" title="Lab">
                 <BrokemonLab player1={data.poke1} cpu={data.poke2}></BrokemonLab>
             </Tab>

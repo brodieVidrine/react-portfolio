@@ -9,7 +9,7 @@
 .battle-message{
     border-radius: 5px;
     background-color:white;
-    border: 3px solid yellow;
+    border: 3px solid rgb(53, 53, 49);
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -40,6 +40,8 @@
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom:3px;
+    font-weight:bold;
+    text-shadow:1px 1px 1px #000;
 }
 
 .typeBadge{

@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import Brokemon from "./Brokemon";
 
 /**
- * 
+ * Opening screen.
  * This is where the player sees which "Brokemon" they've been dealt
  * It's meant to look like a simple trading card
  * --Brodie Vidrine, 2/24
@@ -24,7 +24,8 @@ function BrokemonLab({
 }){
 
     return(
-        <Row className="d-flex align-items-stretch">
+        <>
+        <Row className="w-75 mx-auto">
            
             <Col className="d-flex align-items-stretch" >
                 <Brokemon  species={ toTitleCase( player1.species )  }
@@ -50,7 +51,14 @@ function BrokemonLab({
                 ></Brokemon>
             </Col>
         </Row>
-        
+        <Row className="w-75 mx-auto">
+            <Col className="mx-3 mt-3 battle-message">
+                Welcome to Professor Brillow's Laboratory! 
+                The professor has fetched two random Brokémon from an external database.
+                Click the "Battle" tab to continue. 
+            </Col>
+        </Row>
+        </>
     );
 }
 

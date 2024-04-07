@@ -15,7 +15,7 @@ function BrokemonBattleField({
 }){
 
     return(
-        <div className="mt-2 field-gradient">
+        <Row className="field-gradient">
             <Row className="h-50">
                 <Col>
                     <Row>
@@ -46,7 +46,7 @@ function BrokemonBattleField({
                     </Row>
                 </Col>
             </Row>
-        </div>
+        </Row>
     )
 }
 
