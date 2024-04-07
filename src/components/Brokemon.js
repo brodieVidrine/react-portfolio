@@ -10,8 +10,7 @@ function Brokemon({
     types,
     moves
 }){
-    console.log( "params ", types, moves
-    );
+    
     return(
         <Card className="text-center mt-2 w-100" 
                 style={{
@@ -34,8 +33,8 @@ function Brokemon({
                         {
                         types.map( type =>
 
-                            <Col>
-                                <div className={ type.name+"Badge typeBadge" } >{type.name}</div>
+                            <Col key={species + type.name}>
+                                <div  className={ type.name+"Badge typeBadge" } >{type.name}</div>
                             </Col>
                         
                         )}

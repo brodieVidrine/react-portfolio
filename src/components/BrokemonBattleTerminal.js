@@ -52,9 +52,9 @@ function BrokemonBattleTerminal({
 
     return (
         <Row id="battleTerminal" className="p-3">
-            <Col >
-                <Row className="battle-message align-self-center h-75">
-                    What will {species} do?
+            <Col>
+                <Row className="battle-message text-center h-75 mt-2">
+                    <Col className="align-self-center">What will {species} do?</Col>
                 </Row>
             </Col>
             <Col>
