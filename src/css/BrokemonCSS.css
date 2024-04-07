@@ -9,10 +9,13 @@
 
 .battle-message{
     border-radius: 5px;
-    background-color:white;
-    border: 3px solid rgb(53, 53, 49);
-    font-size: 1.5rem;
+    background-color:#F7EEDD;
+    border: 3px solid lightseagreen;
+    outline: 3px solid rgb(53, 53, 49);
+    font-size: 1.8rem;
     font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 2px lightgrey;
 }
 
 .pokeGif{
@@ -40,9 +43,19 @@
     border: 3px solid rgba(0, 0, 0, .3);
     padding-top: 5px;
     padding-bottom: 5px;
-    margin-bottom:3px;
+    margin-bottom:5px;
+    font-family:'Courier New', Courier, monospace;
     font-weight:bold;
+    font-size: 1.8rem;
     text-shadow:1px 1px 1px #000;
+    outline: 1px solid white;
+    box-shadow:3px 3px 2px 0px black;
+}
+
+.battle-button:hover{
+    box-shadow:1px 1px 1px black;
+    outline: 1px solid lightgrey;
+    color:lightgrey;
 }
 
 .typeBadge{
