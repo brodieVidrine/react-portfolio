@@ -17,12 +17,12 @@ function BrokemonBattle({
 }){
 
     return(
-        <div id="battleMain" className="mt-2 field-gradient rounded">
+        <div id="battleMain" className="mt-2">
            <BrokemonBattleField
                 player1={player1}
                 cpu={cpu} ></BrokemonBattleField>
             <BrokemonBattleTerminal
-                moves={player1.learnsets.generation8}
+                moves={player1.learnsets.generation8.levelUpMoves}
                 species={player1.species}
             ></BrokemonBattleTerminal>
         </div>

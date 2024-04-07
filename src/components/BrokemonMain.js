@@ -42,6 +42,7 @@ const GET_POKEMON = gql`
                     move {
                       type
                       name
+                      basePower
                       shortDesc
                       category
                     }
@@ -70,6 +71,7 @@ const GET_POKEMON = gql`
                 move {
                   type
                   name
+                  basePower
                   shortDesc
                   category
                 }

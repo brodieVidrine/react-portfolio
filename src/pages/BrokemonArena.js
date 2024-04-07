@@ -20,7 +20,7 @@ function BrokemonArena(){
     return(
         <Container fluid className="bgc min-vh-100 d-flex flex-column ">
             <NavBar></NavBar>
-            <Row className="w-75 mx-auto contentArea p-5 text-center">
+            <Row className="w-75 brokeContent mx-auto text-center">
                 <h1>Brokémon Arena</h1>
                 <BrokemonMain></BrokemonMain>
             </Row>
