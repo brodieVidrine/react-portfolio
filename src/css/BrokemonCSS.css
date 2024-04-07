@@ -49,94 +49,95 @@
     border-radius: 3px;
     padding: 2px;
     font-weight:bold;
+    text-shadow:1px 1px 1px #000;
 }
   
 .PoisonBadge{
-    background-color: purple;
+    background-color: #AA6BC8;
     color: white;
 }
   
 .DarkBadge{
-    background-color: black;
+    background-color: #5A5465;
     color: white;
 }
   
 .GrassBadge{
-    background-color: green;
+    background-color: #63BC5A;
     color: white;
 }
   
 .SteelBadge{
-    background-color: darkgrey;
-    color: black;
+    background-color: #5A8EA2;
+    color: white;
 }
   
 .BugBadge{
-    background-color: yellowgreen;
-    color: black;
+    background-color: #91C12F;
+    color: white;
 }
   
 .FightingBadge{
-    background-color: darkred;
+    background-color: #CE416B;
     color: white;
 }
   
 .NormalBadge{
-    background-color: darkgrey;
+    background-color: #929DA3;
     color: white;
 }
   
 .WaterBadge{
-    background-color: blue;
+    background-color: #5090D6;
     color: white;
 }
   
 .RockBadge{
-    background-color: burlywood;
-    color: black;
+    background-color: #C5B78C;
+    color: white;
 }
   
 .FireBadge{
-    background-color: red;
+    background-color: #FF9D55;
     color: white;
 }
   
 .GroundBadge{
-    background-color: brown;
+    background-color: #D97845;
     color: white;
 }
   
 .IceBadge{
-    background-color: lightblue;
-    color: black;
+    background-color: #73CEC0;
+    color: white;
 }
   
 .FlyingBadge{
-    background-color: skyblue;
+    background-color: #8FA9DE;
     color: black;
 }
   
 .ElectricBadge{
-    background-color: yellow;
+    background-color: #F4D23C;
     color: black;
 }
   
 .PsychicBadge{
-    background-color: palevioletred;
+    background-color: #FA7179;
     color: white;
 }
   
 .FairyBadge{
-    background-color: pink;
+    background-color: #EC8FE6;
     color: black;  
 }
   
 .GhostBadge{
-    background-color: darkblue;
+    background-color: #5269AD;
     color: white;
 }
   
 .DragonBadge{
-    background-color: indigo;
+    background-color: #0B6DC3;
     color: white;
 }

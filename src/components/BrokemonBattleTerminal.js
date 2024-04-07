@@ -9,8 +9,30 @@ function attackCPU(target){
     console.log("target ", target);
 }
 
+const fakeMove = {
+    level:"foo",
+    move:{
+        basePower:"15",
+        category:"Physical",
+        name:"Quick Attack",
+        shortDesc:"Blah blah blah",
+        type:"Normal"
+    }
+}
+
+const fakeSet=[fakeMove, fakeMove, fakeMove, fakeMove];
+
 function getAttacks(moves){
-    
+    /**
+     * For simplicity's sake, we're only pulling gen 8 movesets
+     * and only the moveset for this specific pokemon
+     * we occasionally pull mons without sufficent moves
+     * in that case, we supply a fake set
+     * --Brodie Vidrine, 4/7/24
+     */
+    if(moves==undefined || moves.length<4)
+        return fakeSet;
+
     let bestFour = [];
     //let sorted = [];
     let attacks = moves.filter( move =>{
@@ -50,6 +72,7 @@ function BrokemonBattleTerminal({
 }){
     
     const attacks = getAttacks(moves);
+    console.log("attacks ", attacks);
 
     return (
         <Row id="battleTerminal" className="p-3">
