@@ -2,6 +2,10 @@
     background: linear-gradient(0deg, #055719, #44a058, #85e99b, #00D4FF);
 }
 
+#brokeInfoBody p{
+    text-align: left;
+}
+
 #battleTerminal {
     background: linear-gradient(0deg, #4d4e4d, #e6ece8, #e6ece8, #424546);
     border-top: 4px solid darkgray;
@@ -145,12 +149,12 @@
   
 .FlyingBadge{
     background-color: #8FA9DE;
-    color: black;
+    color: white;
 }
   
 .ElectricBadge{
     background-color: #F4D23C;
-    color: black;
+    color: white;
 }
   
 .PsychicBadge{
@@ -160,7 +164,7 @@
   
 .FairyBadge{
     background-color: #EC8FE6;
-    color: black;  
+    color: white;  
 }
   
 .GhostBadge{

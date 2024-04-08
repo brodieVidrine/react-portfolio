@@ -36,7 +36,9 @@ function getAttacks(moves){
     let bestFour = [];
     //let sorted = [];
     let attacks = moves.filter( move =>{
-        return move.move.category === 'Physical' || move.move.category ==='Special';
+        if(move.move != undefined)
+            return move.move.category === 'Physical' || move.move.category ==='Special';
+        
     });
     
     /*

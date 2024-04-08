@@ -3,6 +3,7 @@ import { gql, useQuery } from "@apollo/client";
 import { Tabs, Tab, Spinner } from "react-bootstrap";
 import BrokemonBattle from "../components/BrokemonBattle";
 import BrokemonLab from "../components/BrokemonLab";
+import BrokemonInfo from "./BrokemonInfo";
 
 /**
  * This is the entry-point into the actual Brokemon Arena game
@@ -97,6 +98,9 @@ function BrokemonMain(){
             </Tab>
             <Tab eventKey="brokeBattle" title="Battle" >
                 <BrokemonBattle player1={data.poke1} cpu={data.poke2}></BrokemonBattle>
+            </Tab>
+            <Tab eventKey="brokeInfo" title="Info" >
+                <BrokemonInfo></BrokemonInfo>
             </Tab>
         </Tabs>
         

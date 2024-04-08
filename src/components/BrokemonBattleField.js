@@ -29,8 +29,9 @@ function BrokemonBattleField({
     return(
         <Row className="field-gradient">
             <Row className="h-50 d-flex align-items-center">
+                
                 <Col >
-                    <Row id="cpuHUD" className="w-75 text-right align-self-center">
+                    <Row id="cpuHUD" className="w-75 text-left align-self-center">
                         <Col>
                             {cpuSpecies}
                         </Col>
@@ -58,6 +59,7 @@ function BrokemonBattleField({
                         </Col>
                     </Row>
                 </Col>
+                
             </Row>
         </Row>
     )
