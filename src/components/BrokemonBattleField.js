@@ -28,9 +28,9 @@ function BrokemonBattleField({
     
     return(
         <Row className="field-gradient">
-            <Row className="h-50">
-                <Col>
-                    <Row>
+            <Row className="h-50 d-flex align-items-center">
+                <Col >
+                    <Row id="cpuHUD" className="w-75 text-right align-self-center">
                         <Col>
                             {cpuSpecies}
                         </Col>
@@ -47,10 +47,11 @@ function BrokemonBattleField({
                 <Col >
                     <img id="battleSpriteFront" src={player1.backSprite}></img>
                 </Col>
-                <Col>
-                    <Row >
-                        <Col>
-                            {p1Species}
+                <Col className="d-flex align-items-end">
+                    <Row id="playerHUD" className="w-75 text-right align-self-center">
+                        <Col  ></Col>
+                        <Col className="text-right">
+                            <p className="align-self-right">{p1Species}</p>
                         </Col>
                         <Col>
                             CP:{player1.baseStatsTotal}

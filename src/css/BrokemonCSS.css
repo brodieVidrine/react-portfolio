@@ -7,6 +7,24 @@
     border-top: 4px solid darkgray;
 }
 
+#playerHUD{
+    background-image: url(../static/gr/brokemon/playerHUD.svg);
+    background-size:  contain;
+    background-repeat: no-repeat;
+    height:80px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#cpuHUD{
+    background-image: url(../static/gr/brokemon/cpuHUD.svg);
+    background-size:  contain;
+    background-repeat: no-repeat;
+    height:80px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
 .battle-message{
     border-radius: 5px;
     background-color:#F7EEDD;
@@ -15,7 +33,7 @@
     font-size: 1.8rem;
     font-weight: bold;
     font-family:'Courier New', Courier, monospace;
-    text-shadow: 2px 2px 2px lightgrey;
+    text-shadow: 2px 2px 2px lightgray;
 }
 
 .pokeGif{
