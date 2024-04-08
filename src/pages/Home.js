@@ -82,15 +82,18 @@ function HomePage(){
                         <br ></br>
                         <br ></br>
                         This website began as an <a href="https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/" target="_blank">AWS Amplify + React tutorial</a> on March 24th, 2024. 
-                        It was created on my local machine using NodeJS as a default React project. The project is wired for CI/CD, auto-deploying 
-                        every time I push commits to the main branch. Since the initial creation, 
+                        It was created on my local machine using NodeJS as a default React project. Since the initial creation, 
                         I've installed <a target="_blank" href="https://reactrouter.com/en/main">React-Router</a> for "multi-page" functionality and <a href="https://react-bootstrap.github.io/" target="_blank">React-Bootstrap</a> for responsive styling.
+                        The project is wired for CI/CD, auto-deploying 
+                        every time I push commits to the main branch.
                         Want to take a peek under the hood? I've made the <a href="https://github.com/brodieVidrine/react-portfolio/tree/main/src" target="_blank">Git repository</a> public so you can see how it all fits together.
                         <br ></br>
                         <br ></br>
-                        If you click the <Link to="/brokemonArena">Brokémon Arena</Link> link in the nav bar, you'll find a GraphQL example. Should be fully functional by the weekend. 
+                        If you click the <Link to="/brokemonArena">Brokémon Arena</Link> link in the nav bar, you'll find a GraphQL example. 
+                        I'm serving a pair of "Brokémon" fetched from a graph-ql server. 
+                        My goal is to have a user-controlled battle experience and leaderboard by the weekend.
                         <br></br>
-                        --BV, 4/4/24 
+                        --BV, 4/8/24 
                     </p>
                 </Row>
                 <Row className="justify-content-center flex-grow-1 mt-5" sm={"auto"}> 
