@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Row, Col, Offcanvas } from "react-bootstrap";
 
 import BrokemonBattleField from "./BrokemonBattleField";
@@ -14,11 +15,10 @@ function toTitleCase(str) {
     );
 }
 
-function battleManager(params){
-    
-    console.log("battleManager params = ", params);
-
+function createBattleMessage(mon, attack){
+    return mon + " " + attack;
 }
+
 
 /**
  * The battle screen. 
@@ -32,6 +32,29 @@ function BrokemonBattle({
     cpu
 }){
 
+    function battleManager(params){
+    
+        let attack = params.target.dataset;
+        if(attack == undefined){
+            console.log("no attack found");
+            return;
+        }
+        
+        setBattleMessage( createBattleMessage(attack.power, attack.type) );
+
+        handleShow();
+    
+    }
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const [battleMessage, setBattleMessage] = useState("...");
+
+
+
     return(
         <div id="battleMain" className="mt-2 rounded mx-2">
            <BrokemonBattleField
@@ -42,8 +65,13 @@ function BrokemonBattle({
                 species={ toTitleCase(player1.species)}
                 battleManager={battleManager}
             ></BrokemonBattleTerminal>
-            <Offcanvas>
-
+            <Offcanvas show={show} onHide={handleClose} placement="bottom">
+                <Offcanvas.Header closeButton>
+                <Offcanvas.Title>Attack</Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                    {battleMessage}
+                </Offcanvas.Body>
             </Offcanvas>
         </div>
     )
