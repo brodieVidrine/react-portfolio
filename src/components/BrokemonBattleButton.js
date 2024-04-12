@@ -9,7 +9,7 @@ function BrokemonBattleButton({
     onClick
 }){
     return(
-        <div className={type+"Badge battle-button w-100"} onClick={onClick}>
+        <div data-power={basePower} data-type={type} className={type+"Badge battle-button w-100"} onClick={onClick}>
             {name}
         </div>
     )

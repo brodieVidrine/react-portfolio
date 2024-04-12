@@ -6,11 +6,11 @@ import BrokemonBattleButton from "./BrokemonBattleButton";
 //Filter out the physical moves, limit to 4
 
 function attackCPU(target){
-    console.log("target ", target);
+    console.log("target.dataset ", target.target.dataset );
 }
 
 const fakeMove = {
-    level:"foo",
+    level:"1",
     move:{
         basePower:"15",
         category:"Physical",
@@ -69,12 +69,13 @@ function getAttacks(moves){
 
 function BrokemonBattleTerminal({
     species,
-    moves
+    moves,
+    battleManager
 
 }){
     
     const attacks = getAttacks(moves);
-    console.log("attacks ", attacks);
+    //console.log("attacks ", attacks);
 
     return (
         <Row id="battleTerminal" className="p-3">
@@ -84,41 +85,17 @@ function BrokemonBattleTerminal({
                 </Row>
             </Col>
             <Col>
-                <Row>
-                    <Col>
-                        <BrokemonBattleButton
-                            name={attacks[0].move.name}
-                            basePower={attacks[0].move.basePower}
-                            type={attacks[0].move.type}
-                            onClick={attackCPU}
-                        ></BrokemonBattleButton>
-                    </Col>
-                    <Col>
-                    <BrokemonBattleButton
-                            name={attacks[1].move.name}
-                            basePower={attacks[1].move.basePower}
-                            type={attacks[1].move.type}
-                            onClick={attackCPU}
-                        ></BrokemonBattleButton>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <BrokemonBattleButton
-                            name={attacks[2].move.name}
-                            basePower={attacks[2].move.basePower}
-                            type={attacks[2].move.type}
-                            onClick={attackCPU}
-                        ></BrokemonBattleButton>
-                    </Col>
-                    <Col>
-                    <BrokemonBattleButton
-                            name={attacks[3].move.name}
-                            basePower={attacks[3].move.basePower}
-                            type={attacks[3].move.type}
-                            onClick={attackCPU}
-                        ></BrokemonBattleButton>
-                    </Col>
+                <Row md={2}>
+                    {attacks.slice(0, 4).map((attack, id) => (
+                        <Col key={"attack"+id} >
+                            <BrokemonBattleButton
+                                name={attack.move.name}
+                                basePower={attack.move.basePower}
+                                type={attack.move.type}
+                                onClick={battleManager}
+                            ></BrokemonBattleButton>
+                        </Col>
+                    ))}
                 </Row>
             </Col>
         </Row>

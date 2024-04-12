@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Offcanvas } from "react-bootstrap";
 
 import BrokemonBattleField from "./BrokemonBattleField";
 import BrokemonBattleTerminal from "./BrokemonBattleTerminal";
@@ -13,6 +13,13 @@ function toTitleCase(str) {
     }
     );
 }
+
+function battleManager(params){
+    
+    console.log("battleManager params = ", params);
+
+}
+
 /**
  * The battle screen. 
  * Top half is the "battlefield".
@@ -33,7 +40,11 @@ function BrokemonBattle({
             <BrokemonBattleTerminal
                 moves={player1.learnsets.generation8.levelUpMoves}
                 species={ toTitleCase(player1.species)}
+                battleManager={battleManager}
             ></BrokemonBattleTerminal>
+            <Offcanvas>
+
+            </Offcanvas>
         </div>
     )
 }
