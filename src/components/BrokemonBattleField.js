@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
+import BrokemonBattleHUD from "./BrokemonBattleHUD";
 
 /**
  * 
@@ -28,39 +29,45 @@ function BrokemonBattleField({
     
     return(
         <Row className="field-gradient">
-            <Row className="h-50 d-flex align-items-center">
+            
+            <Row className="h-50">
+                   
+                <Col className="d-flex align-items-start">
+
+                    <BrokemonBattleHUD 
+                        id="cpuHUD"
+                        species={cpuSpecies}
+                        cp={cpu.baseStatsTotal}
+
+                    ></BrokemonBattleHUD>
                 
-                <Col >
-                    <Row id="cpuHUD" className="w-75 text-left align-self-center">
-                        <Col>
-                            {cpuSpecies}
-                        </Col>
-                        <Col>
-                            CP:{cpu.baseStatsTotal}
-                        </Col>
-                    </Row>
                 </Col>
+                
                 <Col >
                     <img id="battleSpriteBack" src={cpu.sprite}></img>    
                 </Col>
+            
             </Row>
+
             <Row className="h-50">
+                
                 <Col >
                     <img id="battleSpriteFront" src={player1.backSprite}></img>
                 </Col>
+
                 <Col className="d-flex align-items-end">
-                    <Row id="playerHUD" className="w-75 text-right align-self-center">
-                        <Col  ></Col>
-                        <Col className="text-right">
-                            <p className="align-self-right">{p1Species}</p>
-                        </Col>
-                        <Col>
-                            CP:{player1.baseStatsTotal}
-                        </Col>
-                    </Row>
+                    
+                    <BrokemonBattleHUD 
+                        id="playerHUD"
+                        species={p1Species}
+                        cp={player1.baseStatsTotal}
+                    >
+                    </BrokemonBattleHUD>
+
                 </Col>
                 
             </Row>
+
         </Row>
     )
 }

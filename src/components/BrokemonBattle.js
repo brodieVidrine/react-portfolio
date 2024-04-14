@@ -32,6 +32,13 @@ function BrokemonBattle({
     cpu
 }){
 
+    /**
+     * #TODO - Replace the battle manager with a proper "reducer"
+     * This will allow us to use our hooks in a separate doc
+     * Would be much cleaner to have the biz logic outside of markup doc
+     * Maybe next refactor, 
+     */
+
     function battleManager(params){
     
         let attack = params.target.dataset;
@@ -65,7 +72,7 @@ function BrokemonBattle({
                 species={ toTitleCase(player1.species)}
                 battleManager={battleManager}
             ></BrokemonBattleTerminal>
-            <Offcanvas show={show} onHide={handleClose} placement="bottom">
+            <Offcanvas className="battle-message text-center" show={show} onHide={handleClose} placement="bottom">
                 <Offcanvas.Header closeButton>
                 <Offcanvas.Title>Attack</Offcanvas.Title>
                 </Offcanvas.Header>
