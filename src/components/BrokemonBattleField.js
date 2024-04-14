@@ -21,7 +21,9 @@ function toTitleCase(str) {
 
 function BrokemonBattleField({
     player1,
-    cpu
+    cpu,
+    playerHPref,
+    enemyHPref
 }){
     
     const p1Species = toTitleCase( player1.species );
@@ -38,7 +40,7 @@ function BrokemonBattleField({
                         id="cpuHUD"
                         species={cpuSpecies}
                         cp={cpu.baseStatsTotal}
-
+                        triggerUpdateHP={ enemyHPref }
                     ></BrokemonBattleHUD>
                 
                 </Col>
@@ -61,6 +63,7 @@ function BrokemonBattleField({
                         id="playerHUD"
                         species={p1Species}
                         cp={player1.baseStatsTotal}
+                        triggerUpdateHP={ playerHPref }
                     >
                     </BrokemonBattleHUD>
 

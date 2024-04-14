@@ -89,6 +89,7 @@ function BrokemonBattleTerminal({
                     {attacks.slice(0, 4).map((attack, id) => (
                         <Col key={"attack"+id} >
                             <BrokemonBattleButton
+                                mon={species}
                                 name={attack.move.name}
                                 basePower={attack.move.basePower}
                                 type={attack.move.type}

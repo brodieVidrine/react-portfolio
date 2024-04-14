@@ -4,15 +4,14 @@
 
 #brokeInfoBody p{
     text-align: left;
-}
+} 
 
 #battleTerminal {
     background: linear-gradient(0deg, #4d4e4d, #e6ece8, #e6ece8, #424546);
     border-top: 4px solid darkgray;
 }
 
-#playerHUD{
-    background-image: url(../static/gr/brokemon/playerHUD.svg);
+.battleHUD{
     background-size:  contain;
     background-repeat: no-repeat;
     height:80px;
@@ -20,13 +19,25 @@
     font-size: 1.3rem;
 }
 
+#playerHUD{
+    background-image: url(../static/gr/brokemon/playerHUD.svg);
+}
+
 #cpuHUD{
     background-image: url(../static/gr/brokemon/cpuHUD.svg);
-    background-size:  contain;
-    background-repeat: no-repeat;
-    height:80px;
-    font-weight: bold;
-    font-size: 1.3rem;
+}
+
+.hpRed{
+    width: 50%;
+    border-radius:8px;
+    background-color:red;
+    border:3px solid gray;
+    outline:3px solid rgb(94, 92, 92);
+}
+
+.hpGreen{
+    
+    background-color:rgb(31, 238, 31);
 }
 
 .battle-message{
