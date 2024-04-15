@@ -9,15 +9,20 @@ function BrokemonBattleHUD({
     triggerUpdateHP,
     id
 }){
-    
+    let current=0;
+
     const [hp, setHP] = useState(100);
 
     const HpBar = forwardRef((props, ref) => {
+        
         useImperativeHandle(ref, () => ({
-          updateHP(e) {
-            console.log("child function", e);
-            setHP(e);
-          }
+
+            updateHP(e) {
+                current ++;            
+                console.log( "returned HP", e );
+                setHP(e, current);
+            }
+
         }));
       
         return (

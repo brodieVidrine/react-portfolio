@@ -1,5 +1,9 @@
 .field-gradient {
     background: linear-gradient(0deg, #055719, #44a058, #85e99b, #00D4FF);
+    background-image: url(../static/gr/brokemon/battleBases.png), linear-gradient(0deg, #055719, #44a058, #85e99b, #00D4FF);
+    background-size:  120%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #brokeInfoBody p{

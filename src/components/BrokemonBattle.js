@@ -41,6 +41,8 @@ function BrokemonBattle({
 
     const [battleMessage, setBattleMessage] = useState("...");
 
+    let enemyHP = parseInt(cpu.baseStats.hp);
+
     const playerObj = {
         totalHP: parseInt(player1.baseStats.hp),
         currentHP: parseInt(player1.baseStats.hp),
@@ -55,6 +57,11 @@ function BrokemonBattle({
 
     }
 
+    const battleTracker = {
+        turn: "player",
+        move: 0
+    }
+
     const playerHPref = useRef();
     const enemyHPref = useRef();
 
@@ -65,7 +72,8 @@ function BrokemonBattle({
      * Maybe next refactor, 
      */
     function battleManager(params){
-    
+
+        battleTracker.move ++;
         let attack = params.target.dataset;
         if(attack == undefined){
             console.log("no attack found");
@@ -77,14 +85,20 @@ function BrokemonBattle({
 
         let damage = parseInt( attack.power );
         //Because I've seen this show up as random strings, set error catch
-        if( isNaN(damage) )
+        if( isNaN(damage) ){
             damage = 20;
-        
+        }
+            
+        console.log( "enemy hp + damage = ", enemyObj.currentHP, damage, battleTracker.move );
+
         enemyObj.currentHP = enemyObj.currentHP - damage;
 
         let percent = parseInt((enemyObj.currentHP/enemyObj.totalHP) * 100);
-        if( enemyObj.currentHP <= 0 )
-            percent = 0;
+        if( enemyObj.currentHP <= 0 ){
+            percent = 0;        
+        }
+            
+        console.log( "percent =", percent );
 
         enemyHPref.current.updateHP( percent );
 
