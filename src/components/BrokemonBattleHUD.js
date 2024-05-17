@@ -18,7 +18,7 @@ function BrokemonBattleHUD({
         useImperativeHandle(ref, () => ({
 
             updateHP(e) {
-                current ++;            
+                current = current+1;            
                 console.log( "returned HP", e );
                 setHP(e, current);
             }

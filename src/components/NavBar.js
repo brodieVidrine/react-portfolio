@@ -14,7 +14,6 @@ function NavBar(){
         <li className="nav-item"><Link to="/" className="nav-link" aria-current="page">Home</Link></li>
         <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
         <li className="nav-item"><Link to="/resume" className="nav-link">Résumé</Link></li>
-        <li className="nav-item"><Link to="/webPortfolio" className="nav-link">Web Portfolio</Link></li>
         <li className="nav-item"><Link to="/brokemonArena" className="nav-link">Brokémon Arena</Link></li>
       </ul>
     </header>

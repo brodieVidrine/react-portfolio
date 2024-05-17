@@ -73,7 +73,7 @@ function BrokemonBattle({
      */
     function battleManager(params){
 
-        battleTracker.move ++;
+        battleTracker.move = battleTracker.move + 1;
         let attack = params.target.dataset;
         if(attack == undefined){
             console.log("no attack found");
